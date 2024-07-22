@@ -1,0 +1,45 @@
+p {
+  color:rgb(2, 2, 2);
+}
+
+body {
+  background-color: #c3c8ec; /* Replace with your desired color */
+}
+
+.Recipes ul li {
+
+  color: black;
+
+}
+
+h1, h2, h3, h4 {
+  color: rgb(0, 0, 0)
+}
+
+h1.onest {
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  font-family: "Onest", sans-serif;
+}
+
+.description {
+  width: 600px; 
+}
+
+.left{
+  width: 600px;
+  float: left; 
+  margin-right: 20px;
+}
+
+.right{
+  width: 600px;
+  float: center;
+  margin-left: 30px;
+
+}
