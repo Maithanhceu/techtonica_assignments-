@@ -23,6 +23,13 @@ for (let i = 0; i < itemIngredients.length; i++){
     checkbox.value = "value"; 
     checkbox.id = "id"; 
 
-    itemIngredients[i].appendChild(checkbox);
-    itemIngredients[i].appendChild(label);
-}
+    itemIngredients[i].insertBefore(checkbox, itemIngredients[i].firstChild)
+    itemIngredients[i].insertBefore(label, checkbox.nextSibling);
+    checkbox.addEventListener("click", function (event){
+        if (event.target.checked){
+        itemIngredients[i].className = "checked";
+        } else {
+        itemIngredients[i].className = ""; 
+        }
+    });
+} 

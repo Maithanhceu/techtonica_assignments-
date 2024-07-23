@@ -43,3 +43,7 @@ h1.onest {
   margin-left: 30px;
 
 }
+
+.checked {
+  text-decoration-line: line-through;
+}
