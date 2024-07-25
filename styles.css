@@ -47,3 +47,18 @@ h1.onest {
 .checked {
   text-decoration-line: line-through;
 }
+
+img{
+  width: 32%;
+}
+@media (min-width: 1081px){
+  body {
+    background-color: green;
+  }
+}
+
+@media (min-width: 1200px){
+  body {
+    background-color: yellow;
+  }
+}
