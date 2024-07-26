@@ -60,6 +60,10 @@ img {
   width: 40%;
 }
 
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
 @media (min-width: 1081px){
   body {
     background-color: green;
