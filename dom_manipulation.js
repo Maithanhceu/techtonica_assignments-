@@ -25,6 +25,7 @@ for (let i = 0; i < itemIngredients.length; i++){
 
     itemIngredients[i].insertBefore(checkbox, itemIngredients[i].firstChild)
     itemIngredients[i].insertBefore(label, checkbox.nextSibling);
+    
     checkbox.addEventListener("click", function (event){
         if (event.target.checked){
         itemIngredients[i].className = "checked";

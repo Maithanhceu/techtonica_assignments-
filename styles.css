@@ -1,9 +1,15 @@
+.navigation {
+  margin: 10px;
+  /* Adjust this value for more spacing */
+}
+
 p {
-  color:rgb(2, 2, 2);
+  color: rgb(2, 2, 2);
 }
 
 body {
-  background-color: #c3c8ec; /* Replace with your desired color */
+  background-color: #D2C7FF;
+  /* Replace with your desired color */
 }
 
 .Recipes ul li {
@@ -12,8 +18,17 @@ body {
 
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: rgb(0, 0, 0)
+}
+
+.description{
+  padding-block: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 h1.onest {
@@ -27,17 +42,22 @@ h1.onest {
   font-family: "Onest", sans-serif;
 }
 
-.description {
-  width: 600px; 
+
+ul{
+  list-style-type: none;
 }
 
-.left{
+.description {
+  width: 850px;
+}
+
+.left {
   width: 600px;
-  float: left; 
+  float: left;
   margin-right: 20px;
 }
 
-.right{
+.right {
   width: 600px;
   float: center;
   margin-left: 30px;
@@ -48,30 +68,41 @@ h1.onest {
   text-decoration-line: line-through;
 }
 
-img{
-  width: 32%;
-  float: center; 
-}
-
 img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
+  width: 42%;
+  top: 60%; 
+  left: 50%; 
+  float: left;
+  padding: 40px;
 }
 
 .selector-for-some-widget {
   box-sizing: content-box;
 }
 
-@media (min-width: 1081px){
+/*<!--media queries--> */
+@media (min-width: 1081px) {
   body {
-    background-color: green;
+    background-color: #9FCC89;
   }
 }
 
-@media (min-width: 1200px){
+@media (max-width: 600px) {
   body {
-    background-color: yellow;
+    font-size: 1.2em;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  body {
+    font-size: 1.2em;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-color: #E7E29C;
   }
 }
