@@ -34,3 +34,8 @@ footer {
 main {
     padding: 1em;
 }
+
+img {
+    border-image-width: 600px;
+}
+
