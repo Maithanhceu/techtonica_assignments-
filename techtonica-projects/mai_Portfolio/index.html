@@ -3,10 +3,11 @@
 <div id="LintHTML">
 
     <head>
-        <meta charset="UTF-8">
+        <meta charset=" UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--Main Body Font-->
         <link
             href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Onest:wght@100..900&display=swap"
             rel="stylesheet">
@@ -14,6 +15,14 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!--Paragraph Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="styles.css"> <!--linking it to Mai Style Sheet :)-->
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200&family=Onest:wght@100..900&display=swap"
+            rel="stylesheet">
 
         <title> Mai's Portfolio</title>
     </head>
@@ -27,20 +36,20 @@
             </div>
 
             <header>
-                <h1 style="margin-bottom: 10px;"> Thanh {Mai}'s Portfolio</h1> 
+                <h1 style="margin-bottom: 10px;"> Thanh {Mai}'s Portfolio</h1>
                 <div class="container-fluid">
-                    <div class="row header-buttons"> 
+                    <div class="row header-buttons">
                         <!-- First button -->
                         <div class="col-md-4">
-                            <a href="#" class="header-buttoms"> 
-                                <i class="fas fa-envelope"></i> Contact Me
+                            <a href="#contactForm" class="contact-button">
+                                <i class="fa-regular fa-message"></i> Contact Me
                             </a>
-            
+
                         </div>
                         <!-- Second button -->
                         <div class="col-md-4">
-                            <a href="#" class="About Me Button">
-                                <i class="fas fa-info-circle"></i> About Me
+                            <a href="https://github.com/Maithanhceu" class="Github Button" target="_blank">
+                                <i class="fa-brands fa-github"></i> Github
                             </a>
                         </div>
                         <!-- Third button -->
@@ -52,69 +61,70 @@
                     </div>
                 </div>
             </header>
-        <!--Main-->
-        <main>
-            <!-- Image Tag -->
-            <div class="image-container">
-                <img src="mai_image.JPG" alt="Mai's Image" class="circle-image">
-            </div>
 
-
-            <!-- Paragraph -->
-            <p> Hello, world. <br><br>
-
-                My name is Mai. I am a <a href="https://techtonica.org/full-time-program/" target="_blank"> Techtonica
-                </a> trained software engineer with a passion for <strong> education, advocacy, </strong> and
-                <strong>accessibility</strong>.
-                <br><br>
-
-                Welcome, to my site! :)
-            </p>
-
-            <!--About Me-->
-            <div class="personal-info">
-                <p><strong>My name is Mai. Pronounced like the word *my*.</strong></p>
-            </div>
-
-            <!--Contact Form- with validation-->
-            <h3> Contact me [Mai]!</h3>
-            <form action="sumbit" method="post">
-
-                <!--Name Information-->
-                <div class="input-container">
-                    <label for="name"> Your Name </label>
-                    <input type="text" id="name" name="name" required>
+            <!--Main-->
+            <main>
+                <div class="container-fluid">
                 </div>
+                <!-- Image Tag -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="image-container">
+                            <img src="mai_image.JPG" alt="Mai's Image" class="circle-image">
+                        </div>
+                    </div>
 
-                <!--Email Information-->
-                <div class="input-container">
-                    <label for="email" id="email" name="email" required> Email </label>
-                    <input type="email" id="email" name="email" required>
+                    <!-- Paragraph -->
+                    <div class="col-md-3">
+
+                        <p class="paragraph">
+
+                            <span style="color:yellow ">console.log (</span><br><br>
+
+                            "Hello, world. <br><br>
+
+                            My name is Mai. I am a <a href="https://techtonica.org/full-time-program/" target="_blank">
+                                Techtonica </a> trained software engineer with a passion for <strong> education,
+                                advocacy, </strong> and <strong>accessibility</strong>.
+                            <br><br>
+
+                            Welcome, to my site! :) <span style="color:yellow ">)</span>
+                        </p>
+                    </div>
+
+                    <!-- Contact Form Section -->
+                    <div class="col-md-6 contoctForm" id="contactForm">
+                        <h3 id="contactFormTitle">Don't be shy -- contact me [Mai]!</h3>
+                        <!-- The form should open in a new window on submission -->
+                        <form id="input-container" action="submit" method="get" target="_blank" style=" display:inline!important;">
+                            <!-- Name Submission -->
+                            <div class="input-container">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <!-- Email Submission -->
+                            <div class="input-container">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <!-- Message Submission -->
+                            <div class="input-container">
+                                <label for="message">Leave me a *Message*</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <a href="mailto:ttmai@my.loyno.edu"><button type="submit">Submit</button></a>
+                            
+                        </form>
+                    </div>
                 </div>
+            </main>
 
-                <!--Message Information-->
-                <div class="input-container">
-                    <label for="message"> Leave me a *Message*</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
+            <footer>
+                <p>&copy; 2024 Mai's Website</p>
+            </footer>
+        </div>
 
-                <!--LinkIn Information-->
-                <div class="input-container">
-                    <label for="name"> Linkedin Information </label>
-                    <input type="text" id="name" name="name">
-                </div>
-
-                <!--Submit Button-->
-                <button type="submit"> Submit </button>
-
-            </form>
-        </main>
-        <footer>
-            <p>&copy; 2024 Mai's Website</p>
-        </footer>
-        <!--Font Source found online-->
+        <!-- Font Source found online -->
         <script src="https://kit.fontawesome.com/eb245dfce0.js" crossorigin="anonymous"></script>
     </body>
-</div>
-
 </html>
