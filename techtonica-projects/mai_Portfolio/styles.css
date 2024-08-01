@@ -8,34 +8,93 @@ header h1 {
     margin: 0;
 }
 
+
+/* header button */
+.header-buttons {
+    display: flex;
+    justify-content: bottom; 
+    /*background-color: #c7dcf3;*/
+    color: #c7dcf3;
+}
+
+.header-buttons i {
+    margin-right: 5px; /* Space between icon and text */
+    vertical-align: middle;
+    line-height: inherit;
+}
+
+.header-buttons:hover {
+    background-color: rgb(166, 179, 236); /* Darker shade on hover */
+}
+
+/* Body*/
+
 body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(180deg, #A4BBE7, #C49AD7, white);
-    font-size: 1em; /* Decrease the body font size */
-    font-weight: 300; /* Decrease the font weight to make it less bold */
-}
-
-body.onest {
-    font-family: "Onest", sans-serif;
+    font-family: "Onest", sans-serif; 
+    font-size: 1em; /* Body font size */
+    font-weight: 300; /* Less bold text */
     letter-spacing: 0.05em;
-    font-weight: 300; /* Adjust font weight to make the font less bold */
     font-style: normal;
 }
-
 header,
 footer {
     background-color: white;
     color: Black;
     text-align: center;
     padding: 1em 3em ;
+    border: 2px solid  rgb(34, 134, 227);
 }
+
+/* Main styling*/
 
 main {
     padding: 1em;
 }
 
-img {
-    border-image-width: 600px;
+.circle-image {
+    width: 400px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    border-radius: 20%;
+    border: 2px solid  rgb(34, 134, 227);
+    object-fit: cover; /* Ensures the image covers the area while maintaining its aspect ratio */
 }
 
+.image-container{
+    width: 75%; 
+    margin-bottom: 20px;
+}
+
+/* Text Box Area */
+
+form {
+    width: 50%;
+}
+
+
+
+.input-container {
+    width: 75%; 
+    margin-bottom: 20px;
+    font-size: .8em;
+    border-radius: 50%;
+}
+
+label {
+    display: block;
+    margin-bottom: 1px;  
+}
+
+input, textarea{
+    width: 100%; 
+    padding: 8px; 
+    border: 1px solid #A4BBE7; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+button{
+    margin-top: 5px; 
+}

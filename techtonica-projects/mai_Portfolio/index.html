@@ -1,43 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+<div id="LintHTML">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Onest:wght@100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Onest:wght@100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title> Mai's Portfolio</title>
-</head>
+        <title> Mai's Portfolio</title>
+    </head>
 
-<!--Body-->
+    <!--Body-->
 
-<body class="onest">
-    <header>
-        <h1> Thanh (Mai)'s Portfolio</h1>
-    </header>
-    <main>
-       <!-- Image Tag -->
+    <body class="onest">
 
-       <img src="mai_image.JPG" alt="Mai's Image">
-        
-       <!-- Paragraph -->
-        <p> Hello, world. <br><br>
+        <div class="container-fluid">
+            <div class="row">
+            </div>
 
-            My name is Mai. I am a <a href="https://techtonica.org/full-time-program/" target="_blank"> Techtonica </a> trained software engineer with a passion for <strong> education, advocacy, </strong> and
-            <strong>accessibility</strong>.
-            <br><br>
+            <header>
+                <h1 style="margin-bottom: 10px;"> Thanh {Mai}'s Portfolio</h1> 
+                <div class="container-fluid">
+                    <div class="row header-buttons"> 
+                        <!-- First button -->
+                        <div class="col-md-4">
+                            <a href="#" class="header-buttoms"> 
+                                <i class="fas fa-envelope"></i> Contact Me
+                            </a>
+            
+                        </div>
+                        <!-- Second button -->
+                        <div class="col-md-4">
+                            <a href="#" class="About Me Button">
+                                <i class="fas fa-info-circle"></i> About Me
+                            </a>
+                        </div>
+                        <!-- Third button -->
+                        <div class="col-md-4">
+                            <a href="https://www.linkedin.com/in/mai-th2024/" class="linkedin-button" target="_blank">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        <!--Main-->
+        <main>
+            <!-- Image Tag -->
+            <div class="image-container">
+                <img src="mai_image.JPG" alt="Mai's Image" class="circle-image">
+            </div>
 
-            Welcome, to my site! :)
-        </p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Mai's Website</p>
-    </footer>
-</body>
+
+            <!-- Paragraph -->
+            <p> Hello, world. <br><br>
+
+                My name is Mai. I am a <a href="https://techtonica.org/full-time-program/" target="_blank"> Techtonica
+                </a> trained software engineer with a passion for <strong> education, advocacy, </strong> and
+                <strong>accessibility</strong>.
+                <br><br>
+
+                Welcome, to my site! :)
+            </p>
+
+            <!--About Me-->
+            <div class="personal-info">
+                <p><strong>My name is Mai. Pronounced like the word *my*.</strong></p>
+            </div>
+
+            <!--Contact Form- with validation-->
+            <h3> Contact me [Mai]!</h3>
+            <form action="sumbit" method="post">
+
+                <!--Name Information-->
+                <div class="input-container">
+                    <label for="name"> Your Name </label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <!--Email Information-->
+                <div class="input-container">
+                    <label for="email" id="email" name="email" required> Email </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!--Message Information-->
+                <div class="input-container">
+                    <label for="message"> Leave me a *Message*</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <!--LinkIn Information-->
+                <div class="input-container">
+                    <label for="name"> Linkedin Information </label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <!--Submit Button-->
+                <button type="submit"> Submit </button>
+
+            </form>
+        </main>
+        <footer>
+            <p>&copy; 2024 Mai's Website</p>
+        </footer>
+        <!--Font Source found online-->
+        <script src="https://kit.fontawesome.com/eb245dfce0.js" crossorigin="anonymous"></script>
+    </body>
+</div>
 
 </html>
