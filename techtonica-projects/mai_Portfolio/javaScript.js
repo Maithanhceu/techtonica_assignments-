@@ -13,7 +13,7 @@ function addCharacter() {
 
 addCharacter();
 
-
+//Create a vertification checking for email 
 const form = document.querySelector("#contactForm");
 
 form.addEventListener("submit", function (event) { 
@@ -27,4 +27,4 @@ form.addEventListener("submit", function (event) {
     }
 });
 
-
+//Hide Form 
