@@ -14,7 +14,7 @@ function addCharacter() {
 addCharacter();
 
 //Create a vertification checking for email 
-const form = document.querySelector("#contactForm");
+const form = document.querySelector("#input-container");
 
 form.addEventListener("submit", function (event) { 
     const emailId = document.getElementById("email").value;
