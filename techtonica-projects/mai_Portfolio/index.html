@@ -31,7 +31,7 @@
                 <div class="row header-buttons">
                     <!-- First button -->
                     <div class="col-md-4">
-                        <a href="#contactForm" class="contact-button">
+                        <a href="#contactForm" class="contact-button" id="contactIcon">
                             <i class="fa-regular fa-message"></i> Contact Me
                         </a>
                     </div>
@@ -56,7 +56,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <!-- Image Tag -->
-                    <div class="col-md-4 offset-md-1">
+                    <div class="col-md-4">
                         <div class="image-container">
                             <img src="mai_image.JPG" alt="Mai's Image" class="circle-image">
                         </div>
@@ -105,38 +105,51 @@
                     </div>
                 </div>
                 <!-- Contact Form Section -->
-                <div class="row">
-                    <div class="col-md-6 contoctForm" id="contactForm">
-                        <h3 id="contactFormTitle">Don't be shy -- contact me <span class="blue">[Mai]</span>!</h3>
-                        <!-- The form should open in a new window on submission -->
-                        <form id="input-container" action="submit" method="get" target="_blank"
-                            style="display:inline!important;">
-                            <!-- Name Submission -->
-                            <div class="input-container">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" required>
+                <div class="container-fluid">
+                    <div class="formRow">
+                        <div class="col-md-6-contactForm" id="contactForm">
+                            <h3 id="contactFormTitle" class="contactFormTitle">
+                                Don't be shy -- contact me <span class="blue">[Mai]</span>!
+                            </h3>
+                        
+                            <form id="input-container" action="submit" method="get">
+                                <!-- Name Submission -->
+                                <div class="input-container">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <!-- Email Submission -->
+                                <div class="input-container">
+                                    <label for="email">Email</label>
+                                    <input type="text" id="email" name="email" required>
+                                </div>
+                                <!-- Message Submission -->
+                                <div class="input-container">
+                                    <label for="message">Leave me a *Message*</label>
+                                    <textarea id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                        <div class="col-md-6 image">
+                            <div class="image-container">
+                                <img src="mai_van.JPG" alt="Description of image" class="end-image">
                             </div>
-                            <!-- Email Submission -->
-                            <div class="input-container">
-                                <label for="text">Email</label>
-                                <input type="text" id="email" name="email" required>
-                            </div>
-                            <!-- Message Submission -->
-                            <div class="input-container">
-                                <label for="message">Leave me a *Message*</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit">Submit</button>
-                        </form>
+                            <p class="end-image-font">Location: Vancouver</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </main>
 
-        <footer>
-            <p>&copy; 2024 Mai's Website</p>
-        </footer>
+    <!---Photos-->
+
     </div>
+    </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mai's Website</p>
+    </footer>
+    </div>
+
     <!-- Font Awesome -->
     <script src="javaScript.js"></script>
     <script src="https://kit.fontawesome.com/eb245dfce0.js" crossorigin="anonymous"></script>

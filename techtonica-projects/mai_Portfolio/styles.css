@@ -46,9 +46,10 @@ body {
     width: 600px; 
     height: 400px; 
     border-radius: 5%;
-    padding: 2em 3em;
-    vertical-align: middle;
+    padding: 2em 3em; /*text padding*/
     line-height: inherit;
+    display: block;
+    margin-left: 6em;
     
 }
 
@@ -81,14 +82,6 @@ main {
     padding: 3em;
 }
 
-.circle-image {
-    width: 400px; 
-    height: 400px; 
-    border-radius: 5%;
-    border: 2px solid  rgb(0, 113, 219);
-    object-fit: cover; 
-}
-
 .image-container{
     width: 75%; 
     margin-bottom: 20px;
@@ -96,19 +89,17 @@ main {
 }
 
 /* Text Box Area */
-.col-md-6.contoctForm{
-    padding: 1em;
-    margin-top: 1em;
 
-}
-
-form {
-    width: 50%;
+.formRow {
+    width: 100%;
+    display: flex;
+    margin-top: 2em;
+    margin-left: 3.5em;
 }
 
 
 .input-container {
-   
+    width:100%; 
     margin-bottom: 20px;
     font-size: 1em;
     border-radius: 50%;
@@ -120,7 +111,7 @@ label {
 }
 
 input, textarea{
-    width: 80%; 
+    width: 100%; 
     padding: 8px; 
     border: 1px solid #A4BBE7; 
     border-radius: 4px; 
@@ -131,5 +122,77 @@ button{
     margin-top: 1px;
     font-size: 1em; 
     background-color: #A4BBE7;
-     border-radius: 4px; 
+    border-radius: 4px; 
+}
+
+/* image */
+
+.circle-image {
+    display: inline-block;
+    width: 400px; 
+    height: 400px; 
+    border-radius: 5%;
+    border: 2px solid  rgb(0, 113, 219);
+    object-fit: cover; 
+    margin-left: 4em;
+}
+
+
+.end-image{
+    display: inline-block;
+    margin-top: 1em;
+    width: 500px; 
+    height: 500px; 
+    border-radius: 5%;
+    border: 2px solid  rgb(0, 113, 219);
+    object-fit: cover; 
+    margin-left: 2em;
+}
+
+.end-image-font{
+    display: block; 
+    margin-top: 1em;
+    font-size: .5em; 
+    text-align: center;
+}
+
+/* Media Queries*/ 
+
+/* Small Screens*/
+@media (max-width: 600px) {
+    .circle-image{
+        margin-left: .5em;
+    }
+    .paragraph{
+        
+       
+        font-size: .8em;
+        width: 400px; 
+        height:450px;
+        margin-left: .5em;
+    }
+
+    .text {
+        width: 500px;
+        margin-right: 10em;
+        margin-left: 0;
+        line-height: normal; 
+        vertical-align: baseline;
+    }
+
+    .formRow {
+        width: 100%;
+        display: block;
+        margin-top: 2em;
+        margin-left: 1em;
+    }
+
+    .end-image{
+        display: block;
+        margin-top: 1.5em;
+        width: 250px; 
+        height: 250px; 
+        margin-left: 1.2em;
+    }
+    
 }
