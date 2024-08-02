@@ -26,7 +26,7 @@
 <body class="onest">
     <div class="container-fluid">
         <header>
-            <h1 style="margin-bottom: 10px;">Thanh {Mai}'s Portfolio</h1>
+            <h1 style="margin-bottom: 10px;">Thanh <span class="blue">{Mai}'s </span>Portfolio</h1>
             <div class="container-fluid">
                 <div class="row header-buttons">
                     <!-- First button -->
@@ -52,7 +52,7 @@
         </header>
 
         <!--Main-->
-  <main>
+        <main>
             <div class="container-fluid">
                 <div class="row">
                     <!-- Image Tag -->
@@ -65,12 +65,12 @@
                     <div class="col-md-4">
                         <p class="paragraph">
                             <span style="color:yellow ">console.log (</span><br><br>
-                            "Hello, world. <br><br>
+                            <span id="Hello"></span> <br><br>
                             My name is Mai. I am a <a href="https://techtonica.org/full-time-program/" target="_blank">
                                 Techtonica </a> trained software engineer with a passion for <strong> education,
                                 advocacy, </strong> and <strong>accessibility</strong>.
                             <br><br>
-                            Welcome, to my site! (:"<span style="color:yellow ">)</span>
+                            Welcome, to my site!"<span style="color:yellow ">)</span>
                         </p>
                     </div>
                 </div>
@@ -78,16 +78,32 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text">
-                            <h2>Mai Awards + Relevant Work Experience + Fun Facts</h2> <br> 
-                            <p>First-generation college  & master graduate, who grew up in an insular, Vietnamese-American, refugee community in New Orleans-East. I have lived abroad for three years, studying and working at different higher-educational institutions, before spending a few years working in the disability space. <br><br>
-                                Now as a Software Engineer, I am utilizing my past experience as a <strong> learner, educator,</strong> and <strong>disability advocate</strong> into making online spaces more <strong>*accessible*</strong>. <br><br>
-                            
-                            </p>You can find my resume <a href = "#" > here.</a> Feel free to contact me at <a href="mailto:ttmai@my.loyno.edu">ttmai@my.loyno.edu</a>, and shoot me a message. </p>
+                            <!--Bio-->
+                            <h2>Mai Awards <span class="blue"> + </span> Relevant Work Experience <span class="blue"> +
+                                </span> Fun Facts</h2> <br>
 
+                            <p><strong> First-generation college & master graduate</strong>, who grew up in an insular,
+                                Vietnamese-American, refugee community in New Orleans-East. I have lived abroad for
+                                three years, studying and working at different <span class="blue">higher-educational
+                                    institutions</span>, before spending a few years working in the <span
+                                    class="blue">disability space.</span> <br><br>
+
+                                Now as a Software Engineer, I am utilizing my past experience as a <strong>learner,
+                                    educator,</strong> and <strong>disability advocate</strong> into making online
+                                spaces more <strong><span class="blue">*accessible*</span></strong>.
+
+                                You can find my resume <a href="#"> here.</a> Feel free to contact me at <a
+                                    href="mailto:ttmai@my.loyno.edu" target="_blank">ttmai@my.loyno.edu</a>, and shoot
+                                me a message.
+                                <br> <br>
+
+                                Outside of coding, I enjoy hiking, meaningful conversations, <a
+                                    href="https://www.instagram.com/pinkhairasian/" target="_blank">ceramics,</a>
+                                pilates, and coming-of-age movies. <br><br>
+                            </p>
                         </div>
                     </div>
                 </div>
-    
                 <!-- Contact Form Section -->
                 <div class="row">
                     <div class="col-md-6 contoctForm" id="contactForm">
@@ -102,8 +118,8 @@
                             </div>
                             <!-- Email Submission -->
                             <div class="input-container">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
+                                <label for="text">Email</label>
+                                <input type="text" id="email" name="email" required>
                             </div>
                             <!-- Message Submission -->
                             <div class="input-container">
@@ -121,8 +137,8 @@
             <p>&copy; 2024 Mai's Website</p>
         </footer>
     </div>
-
-    <!-- Font Source found online -->
+    <!-- Font Awesome -->
+    <script src="javaScript.js"></script>
     <script src="https://kit.fontawesome.com/eb245dfce0.js" crossorigin="anonymous"></script>
 </body>
 
