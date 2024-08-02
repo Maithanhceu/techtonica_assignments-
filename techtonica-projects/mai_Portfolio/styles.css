@@ -8,7 +8,6 @@ header h1 {
     margin: 0;
 }
 
-
 /* header button */
 .header-buttons {
     display: flex;
@@ -31,7 +30,7 @@ header h1 {
 
 body {
     margin: 0;
-    padding: 10;
+    padding: 3;
     background-image: linear-gradient(180deg, #A4BBE7, #C49AD7, white);
     font-family: "Onest", sans-serif; 
     font-size: 1.5em; /* Body font size */
@@ -54,6 +53,15 @@ body {
     
 }
 
+.text{
+    font-size: .7em;
+    vertical-align: middle;
+    line-height: inherit;
+    margin-top: 4em;
+    padding: 2em 4em;
+    background-color: white;
+    border: 2px solid  rgb(0, 113, 219);
+}
 header,
 footer {
     background-color: white;
@@ -80,6 +88,7 @@ main {
 .image-container{
     width: 75%; 
     margin-bottom: 20px;
+    text-align: right;
 }
 
 /* Text Box Area */
