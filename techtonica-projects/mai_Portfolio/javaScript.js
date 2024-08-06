@@ -52,3 +52,4 @@ paragraph.innerHTML = '<strong> First-generation college & master graduate</stro
 const textContentContainer = document.getElementById("text-container");
 textContentContainer.appendChild(h2);
 textContentContainer.appendChild(paragraph);
+
