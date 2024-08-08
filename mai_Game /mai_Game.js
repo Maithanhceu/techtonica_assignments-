@@ -24,8 +24,8 @@ const h1Content = document.createTextNode("Earth, Wind, Fire: Mai's Take on the 
     paragraphRules.innerHTML = "Hi, welcome to Mai take on 'Rock, Paper, Scisscor'. Here are the *RULES*: <br> <br> "
         + "Earth takes out Fire <br>"
         + "Wind blows away Earth <br>"
-        + "Fire consumes Wind <br>"
-        + "You get 3 rounds before a winner is declared <br>"
+        + "Fire consumes Wind <br><br>"
+        + "You get 3 rounds before a winner is declared <br><br>"
         
         + "Have fun!"
     
@@ -33,6 +33,17 @@ const h1Content = document.createTextNode("Earth, Wind, Fire: Mai's Take on the 
     divRules.appendChild(paragraphRules);
     //Append divsRules to the body
     document.body.appendChild(divRules);
+
+    //create a form element with a dropdown box 
+    const formElement = document.createElement("form"); 
+
+    //create input Element and Attribute 
+    const inputElement = document.createElement("input");
+    const inputAttribute = document.createAttribute("type", "value");
+
+
+    formElement.appendChild(inputElement);
+    document.body.appendChild(formElement);
 
 
 // it's a user input for Earth, Wind, Fire
