@@ -34,15 +34,46 @@ const h1Content = document.createTextNode("Earth, Wind, Fire: Mai's Take on the 
     //Append divsRules to the body
     document.body.appendChild(divRules);
 
+    //documentation on how to create form-drop down box https://www.freecodecamp.org/news/html-select-tag-how-to-make-a-dropdown-menu-or-combo-list/
+
     //create a form element with a dropdown box 
-    const formElement = document.createElement("form"); 
+    const formElement = document.createElement("form");
+
+    const labelElement = document.createElement("label");
+        labelElement.setAttribute("for", "elements"); 
+        labelElement.textContent = "Earth, Wind, or Fire"
+    
+    const selectElement = document.createElement("select");
+        selectElement.setAttribute("name", "Elements");
+        selectElement.setAttribute("id", "gameElements")
+
+    //creating more options to choose from for the dropbox
+
+    const optionsDropBox = ["Earth", "Wind", "Fire"]; 
+
+        //use a for each to add content 
+
+        optionsDropBox.forEach(option => {
+            const optionElement = document.createElement("option")
+            optionElement.value = option; 
+            optionElement.text = option; 
+            selectElement.appendChild(optionElement)
+        });
+       
+    
+
 
     //create input Element and Attribute 
     const inputElement = document.createElement("input");
-    const inputAttribute = document.createAttribute("type", "value");
-
-
+        // create input attributes 
+        inputElement.setAttribute("type", "submit");
+        inputElement.setAttribute("value", "Submit");
+    
+    formElement.appendChild(labelElement);
+    formElement.appendChild(selectElement);
     formElement.appendChild(inputElement);
+
+    //Append the form to the body 
     document.body.appendChild(formElement);
 
 
