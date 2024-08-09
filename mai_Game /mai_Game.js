@@ -5,6 +5,10 @@
 //Body html 
 //create a header that's Mai Game
 
+//add font 
+document.body.style.fontFamily = "'Nunito', sans-serif";
+
+
 //documentation to create Element : https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
 
 const maiGameHeader = document.createElement("h1");
@@ -41,7 +45,7 @@ const h1Content = document.createTextNode("Earth, Wind, Fire: Mai's Take on the 
     //created a labelElement 
     const labelElement = document.createElement("label");
         labelElement.setAttribute("for", "elements"); 
-        labelElement.textContent = "Earth, Wind, or Fire"
+        labelElement.textContent = "Earth, Wind, or Fire  " 
 
 
     //create a select Element 
@@ -60,7 +64,7 @@ const h1Content = document.createTextNode("Earth, Wind, Fire: Mai's Take on the 
             optionElement.text = option; 
             selectElement.appendChild(optionElement)
         });
-
+        selectElement.style.fontFamily = "'Nunito', sans-serif";
     //create input Element and Attribute 
     const inputElement = document.createElement("input");
         // create input attributes 
@@ -72,6 +76,9 @@ const h1Content = document.createTextNode("Earth, Wind, Fire: Mai's Take on the 
     formElement.appendChild(selectElement);
     formElement.appendChild(inputElement);
 
+    //add font for the selector button 
+
+    
     //Append the form to the body 
     document.body.appendChild(formElement);
 
@@ -114,11 +121,9 @@ function eWFGame(event){
         result = "You win!"
     } 
     else {
-        result = "You Loose"
+        result = "You Lose"
     }
-   
     gameParagraph.innerHTML = result; 
-
 }
 
 //create a addEventListener 
