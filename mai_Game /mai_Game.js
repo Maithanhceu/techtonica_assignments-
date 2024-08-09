@@ -7,6 +7,7 @@
 
 //add font 
 document.body.style.fontFamily = "'Nunito', sans-serif";
+//Flex-box & styling of the webpage : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 document.body.style.fontSize = "15 px"
 document.body.style.display = 'flex';
 document.body.style.flexDirection = 'column';
