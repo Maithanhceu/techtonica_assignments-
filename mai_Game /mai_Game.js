@@ -25,7 +25,6 @@ const h1Content = document.createTextNode("Earth, Wind, Fire: Mai's Take on the 
         + "Earth takes out Fire <br>"
         + "Wind blows away Earth <br>"
         + "Fire consumes Wind <br><br>"
-        + "You get 3 rounds before a winner is declared <br><br>"
         
         + "Have fun!"
     
@@ -39,16 +38,18 @@ const h1Content = document.createTextNode("Earth, Wind, Fire: Mai's Take on the 
     //create a form element with a dropdown box 
     const formElement = document.createElement("form");
 
+    //created a labelElement 
     const labelElement = document.createElement("label");
         labelElement.setAttribute("for", "elements"); 
         labelElement.textContent = "Earth, Wind, or Fire"
-    
+
+
+    //create a select Element 
     const selectElement = document.createElement("select");
         selectElement.setAttribute("name", "Elements");
         selectElement.setAttribute("id", "gameElements")
 
-    //creating more options to choose from for the dropbox
-
+    //creating more options to choose from for the dropbox and an array of options 
     const optionsDropBox = ["Earth", "Wind", "Fire"]; 
 
         //use a for each to add content 
@@ -59,15 +60,13 @@ const h1Content = document.createTextNode("Earth, Wind, Fire: Mai's Take on the 
             optionElement.text = option; 
             selectElement.appendChild(optionElement)
         });
-       
-    
-
 
     //create input Element and Attribute 
     const inputElement = document.createElement("input");
         // create input attributes 
         inputElement.setAttribute("type", "submit");
         inputElement.setAttribute("value", "Submit");
+        inputElement.setAttribute("id", "input");
     
     formElement.appendChild(labelElement);
     formElement.appendChild(selectElement);
@@ -76,16 +75,57 @@ const h1Content = document.createTextNode("Earth, Wind, Fire: Mai's Take on the 
     //Append the form to the body 
     document.body.appendChild(formElement);
 
+    //Create a selection for results 
+    const gameResults = document.createElement("div"); 
+    gameResults.setAttribute("id", "gameResults")
 
-// it's a user input for Earth, Wind, Fire
-// this is a basic rock, paper, scissor game
-// there is a user.input
-// there is a randomize computer that will insert a num(0,1,3)
+    //InnerHTML for the game 
+    const gameParagraph = document.createElement("p");
+    gameParagraph.innerHTML = ""; 
 
-// a bunch of if statements for the rules of the game 
-// Earth takes out Fire
-// Wind blows away Earth
-// Fire consumes Wind/Air 
+    gameResults.appendChild(gameParagraph);
+    document.body.appendChild(gameResults);
 
+//create a function to randomize the computer to choose Earth, Wind, or Fire 
+function computerChoice(){
+    //optionsDropBox variable already holds Earth Wind and Fire in an array for us in line 54
+    const randomChoice = Math.floor(Math.random() * 3);
+    return optionsDropBox[randomChoice];
+}
+
+//create a function that takes the user.input and computerInput 
+function eWFGame(event){
+    event.preventDefault();
+    let result = '';
+    const userChoice = document.querySelector("#gameElements").value; 
+    const computerInput = computerChoice(); // Get the computer's choice
+
+      // Game Rules: 
+    // "Earth takes out Fire"
+    // "Wind blows away Earth"
+    // "Fire consumes Wind"
+
+    if (userChoice === computerInput){
+        result = "It's a tie!"
+    } 
+    else if (userChoice === "Earth" && computerInput === "Fire" ||
+        userChoice === "Wind" && computerInput === "Earth" ||
+        userChoice === "Fire" && computerInput === "Wind") {
+        result = "You win!"
+    } 
+    else {
+        result = "You Loose"
+    }
+   
+    gameParagraph.innerHTML = result; 
+
+}
+
+//create a addEventListener 
+//documentation: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+// example syntax for .addEventListener 
+    //document.getElementById("myBtn").addEventListener("click", displayDate);
+
+    document.querySelector("form").addEventListener("submit", eWFGame);
 
 
