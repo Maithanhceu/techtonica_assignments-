@@ -7,6 +7,14 @@
 
 //add font 
 document.body.style.fontFamily = "'Nunito', sans-serif";
+document.body.style.display = 'flex';
+document.body.style.flexDirection = 'column';
+document.body.style.alignItems = 'center';
+document.body.style.justifyContent = 'center';
+document.body.style.height = '100vh';
+document.body.style.margin = '10px';
+document.body.style.padding = '20px';
+//document.body.style.backgroundColor = 
 
 
 //documentation to create Element : https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
@@ -64,7 +72,9 @@ const h1Content = document.createTextNode("Earth, Wind, Fire: Mai's Take on the 
             optionElement.text = option; 
             selectElement.appendChild(optionElement)
         });
+        //add font 
         selectElement.style.fontFamily = "'Nunito', sans-serif";
+
     //create input Element and Attribute 
     const inputElement = document.createElement("input");
         // create input attributes 
