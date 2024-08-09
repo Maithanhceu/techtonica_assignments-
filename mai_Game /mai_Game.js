@@ -114,6 +114,13 @@ function computerChoice(){
 }
 
 //create a function that takes the user.input and computerInput 
+//Event Objects 
+
+// Event objects
+// Sometimes, inside an event handler function, you'll see a parameter specified with a name such as event, evt, or e. 
+// This is called the event object, and it is automatically passed to event handlers to provide extra features and information. 
+//Documentation on event objects: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+
 function eWFGame(event){
     event.preventDefault();
     let result = '';
