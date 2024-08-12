@@ -5,7 +5,7 @@
 •	"Wind blows away Earth"
 •	"Fire consumes Wind"
 
-**Technologies:** Use a button to choose an element: Earth, Wind, or Fire. 
+**Technologies:** JavaScript & HTML
 
 **Installation:** 
 To install and run this game locally, follow these steps: 

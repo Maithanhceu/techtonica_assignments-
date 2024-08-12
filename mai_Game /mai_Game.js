@@ -127,7 +127,7 @@ function eWFGame(event){
     const userChoice = document.querySelector("#gameElements").value; 
     const computerInput = computerChoice(); // Get the computer's choice
 
-      // Game Rules: 
+    // Game Rules: 
     // "Earth takes out Fire"
     // "Wind blows away Earth"
     // "Fire consumes Wind"
