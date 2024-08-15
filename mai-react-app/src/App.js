@@ -1,12 +1,12 @@
 
 import './App.css';
-import GameLogic from './GameLogic';
+import EFW from './EFW';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <GameLogic/>
+      <EFW/>
       </header>
     </div>
   );
