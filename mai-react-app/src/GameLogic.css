@@ -1,0 +1,23 @@
+.game-logic-container {
+    border: 2px solid #a03028;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: #f0f0f0;
+    text-align: center;
+  }
+  
+  .game-logic-title {
+    color: #a03028;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .game-logic-description {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+  }

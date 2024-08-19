@@ -1,10 +1,12 @@
 import React from 'react';
+import './GameLogic.css'
+//create a GameLogic component that takes in two props
 
 function GameLogic({ title, description }) {
   return (
-    <div>
-      <h1>{title}</h1>
-      <p>{description}</p>
+    <div className="game-logic-container">
+      <h1 className="game-logic-title">{title}</h1>
+      <p className="game-logic-description">{description}</p>
     </div>
   );
 }

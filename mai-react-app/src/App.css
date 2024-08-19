@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+.App-link {
+  color: #0f8bae;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffcf7e;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.efw-container {
   display: flex;
   flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  padding: 0px;
+  height: 100vh;
+}
+
+.efw-score-container {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 0 auto;
+}
+.efw-score{
+  text-align: center;
+  flex: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.efw-form {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.efw-form label {
+  margin-bottom: 10px; 
+}
+
+.efw-form select {
+  margin-bottom: 5px; 
+  font-size: 15px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 5px; 
+  color:#a03028;
+}
+
+.efw-form button {
+  margin-bottom: 10px; 
+  font-size: 15px;
+  background-color:  #a03028;
+  border-radius: 8px;
+  color: aliceblue;
+}
+
+.efw-form .efw-result {
+  margin-top: 10px; 
+  font-size: 20px;
+}
+
+.reset-btn-container {
+  display: flex;
+  justify-content: center; 
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.reset-btn {
+  background-color: #a03028;
+  border-radius: 12px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #3467c6;
 }
