@@ -26,7 +26,7 @@ const spotifyWrapped = [{
     "id_rank": "05",
     "song_title": "Santé",
     "artist": "Stromae",
-    "genre": "Belgin Pop"
+    "genre": "Belgian Pop"
 },
 {
     "id_rank": "06",
@@ -42,7 +42,7 @@ const spotifyWrapped = [{
 },
 {
     "id_rank": "08",
-    "song_title": "Alone (with Nicki Minaj",
+    "song_title": "Alone (with Nicki Minaj)",
     "artist": ["Kim Petras", "Nicki Minaj"],
     "genre": "Queer Pop"
 },
@@ -60,7 +60,7 @@ const spotifyWrapped = [{
 },
 {
     "id_rank": "11",
-    "song_title": "bad idea right?",
+    "song_title": "Bad Idea, Right?",
     "artist": "Olivia Rodrigo",
     "genre": "Delulu Pop"
 },
