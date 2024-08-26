@@ -1,11 +1,11 @@
 {
   "name": "mai-database",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.cjs",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index.js"
+    "start": "node index.cjs",
+    "server": "nodemon index.cjs"
   },
   "keywords": [],
   "author": "",
