@@ -1,7 +1,6 @@
 import pkg from 'pg';
 const { Pool } = pkg;
 import express from 'express';
-
 const app = express(); // Initialize the express app
 const PORT = 5000;
 
@@ -29,6 +28,8 @@ app.get('/spotifyWrappedTable/', async (req, res) => {
   }
 });
 
+//http://localhost:5000/spotifyWrappedTable/
+
 // POST: Creates resources
 // documentations: https://www.geeksforgeeks.org/express-js-app-post-function/
 
@@ -48,6 +49,8 @@ app.post('/spotifyWrappedTable/', async (req, res) => {
     res.status(500).send('Server error');
   }
 });
+
+// {"song_title": "Your Best American Girl", "artist": "Mitski", "vibe": "Asian Indie"}
 
 //update the vibe or artist of a song 
 
@@ -69,6 +72,9 @@ app.put('/spotifyWrappedTable/:id', async (req, res) => {
     }
 });
 
+//http://localhost:5000/spotifyWrappedTable/1
+//{'id': '1', 'vibe': 'Girly Pop'}
+
 app.delete ('/spotifyWrappedTable/:id', async (req, res) => {
   const {id} = req.params; 
   try {
@@ -82,6 +88,8 @@ app.delete ('/spotifyWrappedTable/:id', async (req, res) => {
     res.status(500).send('Server Error');
   }
 })
+//http://localhost:5000/spotifyWrappedTable/12
+// {'id': '12'}
 // Start the server 
 app.listen(PORT, () => {
   console.log(`Mai server's is running on ${PORT}`)
