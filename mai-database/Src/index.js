@@ -28,7 +28,6 @@ app.get('/spotifyWrappedTable/', async (req, res) => {
   }
 });
 
-//http://localhost:5000/spotifyWrappedTable/
 
 // POST: Creates resources
 // documentations: https://www.geeksforgeeks.org/express-js-app-post-function/
@@ -91,6 +90,7 @@ app.delete ('/spotifyWrappedTable/:id', async (req, res) => {
 //http://localhost:5000/spotifyWrappedTable/12
 // {'id': '12'}
 //Start Server 
+//http://localhost:5000/spotifyWrappedTable/ 
 app.listen(PORT, () => {
   console.log(`Mai server's is running on ${PORT}`)
 })
