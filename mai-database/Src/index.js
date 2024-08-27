@@ -34,7 +34,7 @@ app.get('/spotifyWrappedTable/', async (req, res) => {
 // documentations: https://www.geeksforgeeks.org/express-js-app-post-function/
 
 app.post('/spotifyWrappedTable/', async (req, res) => {
-  const {song_title, artist, vibe } = req.body;
+  const { song_title, artist, vibe } = req.body;
   if (!song_title || !artist || !vibe) {
     return res.status(400).send('Missing required fields');
   } 
