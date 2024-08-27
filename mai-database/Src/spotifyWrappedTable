@@ -1,13 +1,10 @@
-DROP TABLE IF EXISTS spotifyWrappedTable;
-
 CREATE TABLE spotifyWrappedTable (
-    id SERIAL,
-    song_title VARCHAR(255) NOT NULL,
+    id SERIAL PRIMARY KEY
     artist VARCHAR(255) NOT NULL,
     vibe VARCHAR(255) NOT NULL
 );
 
-INSERT INTO spotifyWrappedTable (song_title, artist, vibe) 
+INSERT INTO spotifyWrappedTable (id, song_title, artist, vibe) 
 VALUES 
 ('You"re on Your Own, Kid', 'Taylor Swift', 'Overachiever Pop'),
 ('Jalousie', 'Angèle', 'French Pop'),

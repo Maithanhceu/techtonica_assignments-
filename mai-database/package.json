@@ -1,11 +1,11 @@
 {
   "name": "mai-database",
   "version": "1.0.0",
-  "main": "index.cjs",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.cjs",
-    "server": "nodemon index.cjs"
+    "start": "node src/index.js",
+    "server": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +13,8 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "pg": "^8.12.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
