@@ -90,7 +90,7 @@ app.delete ('/spotifyWrappedTable/:id', async (req, res) => {
 })
 //http://localhost:5000/spotifyWrappedTable/12
 // {'id': '12'}
-// Start the server 
+//Start Server 
 app.listen(PORT, () => {
   console.log(`Mai server's is running on ${PORT}`)
 })
