@@ -2,10 +2,13 @@ import express from 'express';
 import fetch from 'node-fetch';
 const app = express();
 const PORT = 3000;
+require('dotenv').config();
 
 // Replace 'YOUR_OAUTH_TOKEN' with your actual OAuth token
-const oauthToken = 'TTPJYTFCQN7TNPHJ4LFO';
-//use my user_id: 287081848715
+const apiKey = process.env.API_KEY;
+const userid = process.env.USERID; 
+const eventid = process.env.EVENTID; 
+
 // Route for fetching user details
 //documentation for endpoints: https://www.eventbrite.com/platform/api#/reference/user/retrieve-information-about-your-user-account/list-organizations-by-user
 app.get('/users/:user_id', async (req, res) => {
@@ -29,7 +32,6 @@ app.get('/users/:user_id', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-//event id : 1002084711347
 app.get('/events/:event_id', async (req, res) => {
     const { event_id } = req.params; 
 
@@ -56,7 +58,7 @@ app.get('/events/:event_id', async (req, res) => {
     }
 });
 
-//event id : 1002084711347
+
 // Example route for fetching ticket class details
 app.get('/ticket_class/:event_id', async (req, res) => {
     const { event_id } = req.params; 
@@ -86,7 +88,6 @@ app.get('/ticket_class/:event_id', async (req, res) => {
 });
 
 
-//event id : 1002084711347
 app.get('/order_details/:event_id', async (req, res) => {
     const { event_id } = req.params; 
 
@@ -144,7 +145,6 @@ app.get('/venue_details/:venue_id', async (req, res) => {
 });
    
 
-//use my user_id: 287081848715
 // Example route for fetching organizer details
 app.get('/organizer_details/:user_id', async (req, res) => {
     const { user_id } = req.params;
