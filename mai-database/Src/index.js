@@ -49,7 +49,7 @@ app.post('/spotifyWrappedTable/', async (req, res) => {
   }
 });
 
-// {"song_title": "Your Best American Girl", "artist": "Mitski", "vibe": "Asian Indie"}
+// Test example: {"song_title": "Your Best American Girl", "artist": "Mitski", "vibe": "Asian Indie"}
 
 //update the vibe or artist of a song 
 
@@ -72,7 +72,7 @@ app.put('/spotifyWrappedTable/:id', async (req, res) => {
 });
 
 //http://localhost:5000/spotifyWrappedTable/1
-//{'id': '1', 'vibe': 'Girly Pop'}
+// Test example:{'id': '1', 'vibe': 'Girly Pop'}
 
 app.delete ('/spotifyWrappedTable/:id', async (req, res) => {
   const {id} = req.params; 
@@ -88,7 +88,7 @@ app.delete ('/spotifyWrappedTable/:id', async (req, res) => {
   }
 })
 //http://localhost:5000/spotifyWrappedTable/12
-// {'id': '12'}
+// Test example: {'id': '12'}
 
 //Start Server 
 //http://localhost:5000/spotifyWrappedTable/ 
