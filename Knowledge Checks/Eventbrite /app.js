@@ -116,7 +116,6 @@ app.get('/order_details/:event_id', async (req, res) => {
 
 
 // Example route for fetching venue details
-// The venue_id is null so it won't run but I'll still do the setup as if I had a venue_id 
 app.get('/venue_details/:venue_id', async (req, res) => {
     const { venue_id } = req.params; 
 
