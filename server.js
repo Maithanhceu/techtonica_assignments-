@@ -1,13 +1,24 @@
-import express, { json } from 'express';
+import express from 'express';
+import fetch from 'node-fetch';
+import cors from 'cors';
 const app = express();
 const PORT = 5000;
 
-// Middleware to parse JSON bodies
-app.use(json());
+app.use(cors()); // Enable CORS
 
-// Basic route
-app.get('/', (req, res) => {
-    res.send('Hello, world!');
+// Basic route to fetch weather API 
+app.get('/weather/:city', async (req, res) => {
+   const city = req.params.city; 
+   const apiKey = '6f2cebdf6e4f982f409227ba7f2a5de5';
+   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+
+   try {
+    const response = await fetch(url); 
+    const data = await response.json();
+    res.json(data); 
+   } catch (error) {
+    res.status(500).json ({error: 'Cannot fetch weather data, sorry! :('})
+   }
 });
 
 // Start the server
