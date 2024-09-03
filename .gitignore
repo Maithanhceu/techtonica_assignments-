@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 
 
 README.md
 .DS_Store 
 
+=======
+/node_modules
+.DS_Store
+.env
+>>>>>>> origin/mai_weatherAPI_branch
