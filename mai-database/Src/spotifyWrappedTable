@@ -1,0 +1,19 @@
+CREATE TABLE spotifyWrappedTable (
+    id SERIAL PRIMARY KEY
+    artist VARCHAR(255) NOT NULL,
+    vibe VARCHAR(255) NOT NULL
+);
+
+INSERT INTO spotifyWrappedTable (id, song_title, artist, vibe) 
+VALUES 
+('You"re on Your Own, Kid', 'Taylor Swift', 'Overachiever Pop'),
+('Jalousie', 'Angèle', 'French Pop'),
+('Kill Bill', 'SZA', 'Revenge Pop'),
+('Maps', 'Yeah Yeah Yeahs', 'Asian Indie'),
+('Santé', 'Stromae', 'Belgian Pop'),
+('Everybody Wants to Love You', 'Japanese Breakfast', 'Asian Indie'),
+('Kill V. Maim', 'Grimes', 'Fairy Pop'),
+('Alone (with Nicki Minaj)', 'Kim Petras, Nicki Minaj', 'Queer Pop'), 
+('Alien Superstar', 'Beyoncé', 'Iconic Pop'), 
+('Persusive (with SZA)', 'Doechii, SZA', 'Soft-Girl Pop'), 
+('Bad Idea, Right?', 'Olivia Rodrigo', 'Delulu Pop'); 
