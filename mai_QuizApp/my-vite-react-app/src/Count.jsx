@@ -2,7 +2,7 @@ import { useState } from 'react';
 import he from 'he';  
 import './Count.css';
 
-function Count({ questions }) {
+function Count({ questions, onGameEnd }) {
   const [count, setCount] = useState(0);
   const [previousAn, setPreviousAn] = useState({});
   const [answeredQuestions, setAnsweredQuestions] = useState({});
@@ -31,16 +31,15 @@ function Count({ questions }) {
       [index]: true
     }));
 
-    // Check if all questions are answered
+    
     if (Object.keys(answeredQuestions).length + 1 === questions.length) {
-      if (count + 1 > 6) {
-        setGameStatus('win');
-      } else {
-        setGameStatus('lose');
+      const finalStatus = count + 1 > 6 ? 'win' : 'lose';
+      setGameStatus(finalStatus);
+      if (onGameEnd) {
+        onGameEnd(finalStatus, count + 1); 
       }
     }
 
-    // Clear feedback after 1 second
     setTimeout(() => {
       setPreviousAn(prevAn => ({
         ...prevAn,
@@ -54,7 +53,7 @@ function Count({ questions }) {
       <p id='score'>Score: {count}</p>
       {questions.map((question, index) => (
         <div key={index}>
-          <p>{he.decode(question.question)}</p> {/* Use `he.decode` here */}
+          <p>{he.decode(question.question)}</p> 
           {question.incorrect_answers.concat(question.correct_answer)
             .map((answer, i) => (
               <button
@@ -64,7 +63,7 @@ function Count({ questions }) {
                 onClick={() => handleAnswerClick(answer, question.correct_answer, index)}
                 disabled={answeredQuestions[index] !== undefined}
               >
-                {he.decode(answer)} {/* Use `he.decode` here */}
+                {he.decode(answer)} 
               </button>
             ))}
           {previousAn[index] && <p>{previousAn[index]}</p>}

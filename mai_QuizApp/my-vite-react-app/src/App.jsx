@@ -5,6 +5,8 @@ import { useState } from 'react';
 function App() {
   const [questions, setQuestions] = useState([]);
   const [error, setError] = useState('');
+  const [finalStatus, setFinalStatus] = useState('');
+  const [finalScore, setFinalScore] = useState(0);
 
   const trivia = async () => {
     try {
@@ -19,26 +21,33 @@ function App() {
     }
   };
 
+  const handleGameEnd = (status, score) => {
+    setFinalStatus(status);
+    setFinalScore(score);
+  };
+
   return (
     <div className='App'>
       <header className='App-header'>
         <div className="header-content">
           <img
-            src="/Mai.png" // Ensure this path is correct
+            src="/Mai.png" 
             alt="Pink hair Asian femme presenting person smiling brightly"
             className="header-image"
           />
           <h1 className="header-title">Mai Trivia</h1>
         </div>
         <div>
-          {/* Render the Count component and pass questions as a prop */}
-          <Count questions={questions} />
+          <Count questions={questions} onGameEnd={handleGameEnd} />
         </div>
         <div>
-          {/* Button to fetch trivia questions */}
           <button onClick={trivia}>Play Game: Click Here :)</button>
         </div>
+  
         {error && <p>{error}</p>}
+        {finalStatus && (
+          <p>{finalStatus === 'win' ? 'Congratulations on winning!' : 'Sorry, you lost. Better luck next time!'} Final Score: {finalScore}</p>
+        )}
       </header>
     </div>
   );
