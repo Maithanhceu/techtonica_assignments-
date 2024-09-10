@@ -27,4 +27,4 @@ The game presents trivia questions about movies/films. Users will answer questio
 
 # Example of how the end of the game should appear after a user finishes answering all questions:
 
-![Game End GIF](https://media.giphy.com/media/YcizLoTtuKsUYLjg3M/giphy.gif)
+[Game End GIF](https://media.giphy.com/media/YcizLoTtuKsUYLjg3M/giphy.gif)
