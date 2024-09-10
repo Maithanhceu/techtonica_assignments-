@@ -20,3 +20,11 @@ To install and run this game locally, follow these steps:
 First, clone the repository to your local machine using the following command: https://github.com/Maithanhceu/techtonica_assignments-/tree/50487cbf4223a67262121a252f20c3264fb99105/mai_QuizApp```bash git clone
 
 Open VSCode and open the  in the browser. You should see the following Game: 
+
+
+# Gameplay:
+The game presents trivia questions about movies/films. Users will answer questions and see their score at the end of the game.
+
+# Example of how the end of the game should appear after a user finishes answering all questions:
+
+<iframe src="https://giphy.com/embed/YcizLoTtuKsUYLjg3M" width="480" height="288" style="border:none;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> <p><a href="https://giphy.com/gifs/YcizLoTtuKsUYLjg3M">via GIPHY</a></p>
