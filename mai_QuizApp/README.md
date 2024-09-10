@@ -26,9 +26,10 @@ Open VSCode and open the  in the browser. You should see the following Game:
 The game presents trivia questions about movies/films. Users will answer questions and see their score at the end of the game.
 
 # Click Play on the App: 
-[Game Beginning GIF] (https://giphy.com/gifs/FVkD8GfNaVZj62vInf)
+Once you open the link - the following should be shown on the screen. 
+[Game Beginning GIF](https://media.giphy.com/media/FVkD8GfNaVZj62vInf/giphy.gif)
 
 
 # How the end of the App should appear after a user finishes answering all questions:
-
+This is the visual at the end of the game once all the questions are done :) 
 [Game End GIF](https://media.giphy.com/media/YcizLoTtuKsUYLjg3M/giphy.gif)
