@@ -75,7 +75,7 @@ function Count({ questions, onGameEnd }) {
           {gameStatus === 'win' ? (
             <p>Congratulations! You won the game!</p>
           ) : (
-            <p>Game over! You lost the game. Try again!</p>
+            <p></p>
           )}
         </div>
       )}
