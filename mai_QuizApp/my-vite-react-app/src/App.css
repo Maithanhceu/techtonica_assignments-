@@ -1,0 +1,33 @@
+#root {
+  max-width: 1280px;
+  margin:  0 auto;
+  padding: 4rem;
+  text-align: center;
+  background-color: rgb(156, 192, 234);
+  border-radius: 5em;
+  color: white; 
+  font-size: 1.2em;
+
+}
+
+.App-header {
+  text-align: center; /* Centers all header content */
+}
+
+.header-content {
+  display: inline-block; 
+}
+
+.header-image {
+  width: 100px; 
+  height: auto; 
+  vertical-align: bottom; 
+}
+
+.header-title {
+  display: inline; 
+  margin-left: 10px; 
+  vertical-align: middle;
+  font-family: 'Bungee Tint', cursive;
+  font-size: 4em;
+}

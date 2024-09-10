@@ -1,0 +1,21 @@
+{
+    "name": "nodejs",
+    "version": "1.0.0",
+    "proxy": "http://localhost:3000",
+    "description": "You will complete this assignment locally and share a link to a PR in your GitHub",
+    "type": "module",
+    "module": "app.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@types/node": "^20.9.1",
+      "express": "^4.19.2",
+      "node-fetch": "^3.3.2"
+    },
+    "main": "app.js"
+  }
+  
