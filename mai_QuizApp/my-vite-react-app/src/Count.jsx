@@ -1,11 +1,6 @@
 import { useState } from 'react';
+import he from 'he';  
 import './Count.css';
-
-const decodeHtml = (html) => {
-  const txt = document.createElement('textarea');
-  txt.innerHTML = html;
-  return txt.value;
-};
 
 function Count({ questions }) {
   const [count, setCount] = useState(0);
@@ -59,7 +54,7 @@ function Count({ questions }) {
       <p id='score'>Score: {count}</p>
       {questions.map((question, index) => (
         <div key={index}>
-          <p>{decodeHtml(question.question)}</p>
+          <p>{he.decode(question.question)}</p> {/* Use `he.decode` here */}
           {question.incorrect_answers.concat(question.correct_answer)
             .map((answer, i) => (
               <button
@@ -69,7 +64,7 @@ function Count({ questions }) {
                 onClick={() => handleAnswerClick(answer, question.correct_answer, index)}
                 disabled={answeredQuestions[index] !== undefined}
               >
-                {decodeHtml(answer)}
+                {he.decode(answer)} {/* Use `he.decode` here */}
               </button>
             ))}
           {previousAn[index] && <p>{previousAn[index]}</p>}
