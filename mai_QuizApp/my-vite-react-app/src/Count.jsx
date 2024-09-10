@@ -35,6 +35,7 @@ function Count({ questions, onGameEnd }) {
     if (Object.keys(answeredQuestions).length + 1 === questions.length) {
       const finalStatus = count + 1 > 6 ? 'win' : 'lose';
       setGameStatus(finalStatus);
+      //my callback()  
       if (onGameEnd) {
         onGameEnd(finalStatus, count + 1); 
       }
