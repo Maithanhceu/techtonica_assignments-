@@ -2,6 +2,7 @@ import { useState } from 'react';
 import he from 'he';  
 import './Count.css';
 
+//props
 function Count({ questions, onGameEnd }) {
   const [count, setCount] = useState(0);
   const [previousAn, setPreviousAn] = useState({});
