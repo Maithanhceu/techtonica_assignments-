@@ -27,6 +27,7 @@ The game presents trivia questions about movies/films. Users will answer questio
 
 # Click Play on the App: 
 Once you open the link - the following should be shown on the screen. 
+
 ![Game Beginning GIF](https://media.giphy.com/media/FVkD8GfNaVZj62vInf/giphy.gif)
 
 
