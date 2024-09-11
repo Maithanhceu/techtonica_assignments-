@@ -2,6 +2,7 @@ import { useState } from 'react';
 import he from 'he';  
 import './Count.css';
 
+//props
 function Count({ questions, onGameEnd }) {
   const [count, setCount] = useState(0);
   const [previousAn, setPreviousAn] = useState({});
@@ -22,7 +23,7 @@ function Count({ questions, onGameEnd }) {
     } else {
       setPreviousAn(prevAn => ({
         ...prevAn,
-        [index]: 'Incorrect :( (go to next question)'
+        [index]: 'Incorrect :('
       }));
     }
 
@@ -35,6 +36,7 @@ function Count({ questions, onGameEnd }) {
     if (Object.keys(answeredQuestions).length + 1 === questions.length) {
       const finalStatus = count + 1 > 6 ? 'win' : 'lose';
       setGameStatus(finalStatus);
+      //my callback()  
       if (onGameEnd) {
         onGameEnd(finalStatus, count + 1); 
       }
@@ -54,18 +56,20 @@ function Count({ questions, onGameEnd }) {
       {questions.map((question, index) => (
         <div key={index}>
           <p>{he.decode(question.question)}</p> 
-          {question.incorrect_answers.concat(question.correct_answer)
-            .map((answer, i) => (
-              <button
-                id='button'
-                key={i}
-                type="button"
-                onClick={() => handleAnswerClick(answer, question.correct_answer, index)}
-                disabled={answeredQuestions[index] !== undefined}
-              >
-                {he.decode(answer)} 
-              </button>
-            ))}
+          <form onSubmit={(e) => e.preventDefault()}>
+            {question.incorrect_answers.concat(question.correct_answer)
+              .map((answer, i) => (
+                <button
+                  id='button'
+                  key={i}
+                  type="button"
+                  onClick={() => handleAnswerClick(answer, question.correct_answer, index)}
+                  disabled={answeredQuestions[index] !== undefined}
+                >
+                  {he.decode(answer)} 
+                </button>
+              ))}
+          </form>
           {previousAn[index] && <p>{previousAn[index]}</p>}
         </div>
       ))}
@@ -74,7 +78,7 @@ function Count({ questions, onGameEnd }) {
           {gameStatus === 'win' ? (
             <p>Congratulations! You won the game!</p>
           ) : (
-            <p>Game over! You lost the game. Try again!</p>
+            <p></p>
           )}
         </div>
       )}
