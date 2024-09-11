@@ -23,7 +23,7 @@ function Count({ questions, onGameEnd }) {
     } else {
       setPreviousAn(prevAn => ({
         ...prevAn,
-        [index]: 'Incorrect :( (go to next question)'
+        [index]: 'Incorrect :('
       }));
     }
 
@@ -56,18 +56,20 @@ function Count({ questions, onGameEnd }) {
       {questions.map((question, index) => (
         <div key={index}>
           <p>{he.decode(question.question)}</p> 
-          {question.incorrect_answers.concat(question.correct_answer)
-            .map((answer, i) => (
-              <button
-                id='button'
-                key={i}
-                type="button"
-                onClick={() => handleAnswerClick(answer, question.correct_answer, index)}
-                disabled={answeredQuestions[index] !== undefined}
-              >
-                {he.decode(answer)} 
-              </button>
-            ))}
+          <form onSubmit={(e) => e.preventDefault()}>
+            {question.incorrect_answers.concat(question.correct_answer)
+              .map((answer, i) => (
+                <button
+                  id='button'
+                  key={i}
+                  type="button"
+                  onClick={() => handleAnswerClick(answer, question.correct_answer, index)}
+                  disabled={answeredQuestions[index] !== undefined}
+                >
+                  {he.decode(answer)} 
+                </button>
+              ))}
+          </form>
           {previousAn[index] && <p>{previousAn[index]}</p>}
         </div>
       ))}

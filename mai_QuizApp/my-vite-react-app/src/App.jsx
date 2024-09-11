@@ -37,7 +37,7 @@ function App() {
           />
           <h1 className="header-title">Mai Trivia</h1>
         </div>
-        <div>
+        <div> 
           <Count questions={questions} onGameEnd={handleGameEnd} />
         </div>
         <div>
