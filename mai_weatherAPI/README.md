@@ -28,11 +28,11 @@ The weather app presents an app a component that will users to find a the weathe
 # Click Play on the App:
 Once you open the link - the following should be shown on the screen.
 
-![Game Beginning](https://giphy.com/embed/yiLIvLOHdXgk1mWWug)
+![Game Beginning](https://media.giphy.com/media/yiLIvLOHdXgk1mWWug/giphy.gif)
 
 
 # How the end of the App should appear after a user finishes answering all questions:
 This is the visual at the end of the game once all the questions are done :) 
 
-![Game End](https://giphy.com/embed/eQmu9tcV2negAFgC8v)
+![Game End](https://media.giphy.com/media/eQmu9tcV2negAFgC8v/giphy.gif)
 
