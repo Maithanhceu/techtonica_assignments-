@@ -1,18 +1,18 @@
 # React + Vite
 
 # Mai weather App
--- A weather app that allows users to search weather location.
+- A weather app that allows users to search weather location.
 
 # Frameworks
--- ExpressJS
--- React using Vite 
+- ExpressJS
+- React using Vite 
 
 # Libraries/Tools 
--- NodeJS
--- Express
--- Postman
--- Vite
--- Fetch
+- NodeJS
+- Express
+- Postman
+- Vite
+- Fetch
 
 # Installation: 
 To install and run this game locally, follow these steps:
