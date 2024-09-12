@@ -1,88 +1,23 @@
---
--- PostgreSQL database dump
---
-
--- Dumped from database version 13.3
--- Dumped by pg_dump version 14.2
-
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
-
-SET default_tablespace = '';
-
-SET default_table_access_method = heap;
-
---
--- Name: students; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.students (
-    id integer NOT NULL,
-    firstname character varying(255),
-    lastname character varying(255),
-    is_current boolean
+-- Create the table if it does not already exist
+CREATE TABLE IF NOT EXISTS events (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) UNIQUE,
+    event_date DATE,
+    event_location VARCHAR(100) -- Changed from 'location' to 'VARCHAR(100)' for simplicity
 );
 
+-- Add the `event_location` column if it does not already exist
+ALTER TABLE events
+ADD COLUMN IF NOT EXISTS event_location VARCHAR(100);
 
---
--- Name: students_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.students_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: students_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.students_id_seq OWNED BY public.students.id;
-
-
---
--- Name: students id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.students ALTER COLUMN id SET DEFAULT nextval('public.students_id_seq'::regclass);
-
-
---
--- Data for Name: students; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.students (id, firstname, lastname, is_current) FROM stdin;
-\.
-
-
---
--- Name: students_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.students_id_seq', 1, false);
-
-
---
--- Name: students students_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.students
-    ADD CONSTRAINT students_pkey PRIMARY KEY (id);
-
-
---
--- PostgreSQL database dump complete
---
-
+-- Insert data with conflict handling
+INSERT INTO events (name, event_date, event_location)
+VALUES
+    ('Mai Code Challenge', '1945-05-05', 'London, United Kingdom'),
+    ('Meet and Greet', '2024-11-13', 'Brooklyn, New York'),
+    ('Lecture on Collaborating and Sharing', '1989-11-19', 'Berlin, Germany')
+ON CONFLICT (name) DO UPDATE
+SET event_date = EXCLUDED.event_date,
+    event_location = EXCLUDED.event_location
+WHERE events.event_date IS DISTINCT FROM EXCLUDED.event_date
+   OR events.event_location IS DISTINCT FROM EXCLUDED.event_location;

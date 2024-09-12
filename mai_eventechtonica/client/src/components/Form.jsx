@@ -1,122 +1,114 @@
-import React, { useState, useEffect } from 'react'
-import { Button, Form } from "react-bootstrap"
+import React, { useState, useEffect } from 'react';
+import { Button, Form } from "react-bootstrap";
 
-const MyForm = ({ onSaveStudent, editingStudent, onUpdateStudent }) => {
+const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
 
-    // This is the original State with not initial student 
-    const [student, setStudent] = useState(editingStudent || {
-        firstname: "",
-        lastname: "",
-        is_current: false
+    // This is the initial state with an empty event or the editing event
+    const [event, setEvent] = useState(editingEvent || {
+        name: "",
+        event_date: "",
+        event_location: "",
     });
 
-    //create functions that handle the event of the user typing into the form
-    const handleNameChange = (event) => {
-        const firstname = event.target.value;
-        setStudent((student) => ({ ...student, firstname }));
-
+    // Functions to handle user input
+    const handleNameChange = (e) => {
+        const name = e.target.value;
+        setEvent((prevEvent) => ({ ...prevEvent, name }));
     };
 
-    const handleLastnameChange = (event) => {
-        const lastname = event.target.value;
-        setStudent((student) => ({ ...student, lastname }));
+    const handleDateChange = (e) => {
+        const event_date = e.target.value;
+        setEvent((prevEvent) => ({ ...prevEvent, event_date }));
     };
 
-    const handleCheckChange = (event) => {
-        const is_current = event.target.checked;
-        //console.log(iscurrent);
-        setStudent((student) => ({ ...student, is_current }));
+    const handleLocationChange = (e) => {
+        const event_location = e.target.value;
+        setEvent((prevEvent) => ({ ...prevEvent, event_location }));
     };
 
     const clearForm = () => {
-        setStudent({ firstname: "", lastname: "", is_current: false })
-    }
+        setEvent({ name: "", event_date: "", event_location: "" });
+    };
 
-    //A function to handle the post request
-    const postStudent = (newStudent) => {
-        return fetch("http://localhost:8080/api/students", {
+    // Function to handle the POST request for a new event
+    const postEvent = (newEvent) => {
+        return fetch("http://localhost:8080/events", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(newStudent),
+            body: JSON.stringify(newEvent),
         })
-            .then((response) => {
-                return response.json();
-            })
+            .then((response) => response.json())
             .then((data) => {
-                //console.log("From the post ", data);
-                //I'm sending data to the List of Students (the parent) for updating the list
-                onSaveStudent(data);
-                //this line just for cleaning the form
+                onSaveEvent(data);
                 clearForm();
             });
     };
 
-    //A function to handle the post request
-    const putStudent = (toEditStudent) => {
-        return fetch(`http://localhost:8080/api/students/${toEditStudent.id}`, {
+    // Function to handle the PUT request for updating an existing event
+    const putEvent = (toEditEvent) => {
+        return fetch(`http://localhost:8080/api/events/${toEditEvent.id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(toEditStudent),
+            body: JSON.stringify(toEditEvent),
         })
-            .then((response) => {
-                return response.json();
-            })
+            .then((response) => response.json())
             .then((data) => {
-                onUpdateStudent(data);
-                //this line just for cleaning the form
+                onUpdateEvent(data);
                 clearForm();
             });
     };
 
-
-    //A function to handle the submit in both cases - Post and Put request!
+    // Function to handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (student.id) {
-            putStudent(student);
+        if (event.id) {
+            putEvent(event);
         } else {
-            postStudent(student);
+            postEvent(event);
         }
     };
 
     return (
-        <Form className='form-students' onSubmit={handleSubmit}>
+        <Form className='form-events' onSubmit={handleSubmit}>
             <Form.Group>
-                <Form.Label>First Name</Form.Label>
+                <Form.Label>Event Name</Form.Label>
                 <input
                     type="text"
-                    id="add-user-name"
-                    placeholder="First Name"
+                    id="add-event-name"
+                    placeholder="Event Name"
                     required
-                    value={student.firstname}
+                    value={event.name}
                     onChange={handleNameChange}
                 />
             </Form.Group>
             <Form.Group>
-                <Form.Label>Last Name</Form.Label>
+                <Form.Label>Event Date</Form.Label>
                 <input
-                    type="text"
-                    id="add-user-lastname"
-                    placeholder="Last Name"
+                    type="date"
+                    id="add-event-date"
+                    placeholder="Event Date"
                     required
-                    value={student.lastname}
-                    onChange={handleLastnameChange}
+                    value={event.event_date}
+                    onChange={handleDateChange}
                 />
             </Form.Group>
-            <Form.Check
-                type={'checkbox'}
-                id={`isCurrent`}
-                checked={student.is_current}
-                onChange={handleCheckChange}
-                label={`Are they in the current program?`}
-            />
             <Form.Group>
-            <Button type="submit" variant="outline-success">{student.id ? "Edit Student" : "Add Student"}</Button>
-            {student.id ? <Button type="button" variant="outline-warning" onClick={clearForm}>Cancel</Button> : null}
+                <Form.Label>Event Location</Form.Label>
+                <input
+                    type="text"
+                    id="add-event-location"
+                    placeholder="Event Location"
+                    required
+                    value={event.event_location}
+                    onChange={handleLocationChange}
+                />
+            </Form.Group>
+            <Form.Group>
+                <Button type="submit" variant="outline-success">{event.id ? "Edit Event" : "Add Event"}</Button>
+                {event.id ? <Button type="button" variant="outline-warning" onClick={clearForm}>Cancel</Button> : null}
             </Form.Group>
         </Form>
     );
 };
 
-
-export default MyForm
+export default MyForm;

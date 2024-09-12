@@ -1,4 +1,4 @@
-# Mai_eventechtonica
+# Mai Eventechtonica
 - An event form to manage events over the course of this week. 
 
 # Frameworks: 
