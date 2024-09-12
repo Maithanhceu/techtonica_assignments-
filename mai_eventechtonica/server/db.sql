@@ -11,7 +11,7 @@ ALTER TABLE events
 ADD COLUMN IF NOT EXISTS event_location VARCHAR(100);
 
 -- Insert data with conflict handling
-INSERT INTO events (name, event_date, event_location)
+INSERT INTO events (name, event_date, event_location, event_description)
 VALUES
     ('Mai Code Challenge', '1945-05-05', 'London, United Kingdom'),
     ('Meet and Greet', '2024-11-13', 'Brooklyn, New York'),
