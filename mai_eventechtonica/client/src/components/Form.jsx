@@ -8,6 +8,7 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
         name: "",
         event_date: "",
         event_location: "",
+        event_description: "",
     });
 
     // Functions to handle user input
@@ -25,9 +26,13 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
         const event_location = e.target.value;
         setEvent((prevEvent) => ({ ...prevEvent, event_location }));
     };
-
+    // handleEventDescription 
+    const handleEventDescription = (e) => {
+        const event_description = e.target.value; 
+        setEvent((prevEvent) => ({ ...prevEvent, event_description}));
+    }
     const clearForm = () => {
-        setEvent({ name: "", event_date: "", event_location: "" });
+        setEvent({ name: "", event_date: "", event_location: "", event_description: ""});
     };
 
     // Function to handle the POST request for a new event
@@ -101,6 +106,17 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
                     required
                     value={event.event_location}
                     onChange={handleLocationChange}
+                />
+            </Form.Group>
+            <Form.Group>
+                <Form.Label> Description </Form.Label>
+                <input
+                    type="text"
+                    id="add-event-description"
+                    placeholder="Event Description"
+                    required
+                    value={event.event_description}
+                    onChange={handleEventDescription}
                 />
             </Form.Group>
             <Form.Group>
