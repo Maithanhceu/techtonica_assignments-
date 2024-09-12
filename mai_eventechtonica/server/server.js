@@ -29,8 +29,8 @@ app.post('/events', async (req, res) => {
         const newEvent = {
             name: req.body.name,
             event_date: req.body.event_date,
-            event_location: req.body.event_location
-            event_description: req.body.event_description
+            event_location: req.body.event_location,
+            event_description: req.body.event_description,
         };
         const result = await db.query(
             'INSERT INTO events(name, event_date, event_location) VALUES($1, $2, $3) RETURNING *',
@@ -61,10 +61,10 @@ app.put('/events/:eventId', async (req, res) => {
     const updatedEvent = {
         name: req.body.name,
         event_date: req.body.event_date,
-        event_location: req.body.event_location
-        event_description: req.body.event_description
+        event_location: req.body.event_location,
+        event_description: req.body.event_description,
     };
-    const query = `UPDATE events SET name=$1, event_date=$2, event_location=$3 WHERE id=$4 RETURNING *`;
+    const query = `UPDATE events SET name=$1, event_date=$2, event_location=$3, event_description=$4 WHERE id=$5 RETURNING *`;
     const values = [updatedEvent.name, updatedEvent.event_date, updatedEvent.event_location, updatedEvent.event_description, eventId];
     try {
         const updated = await db.query(query, values);
