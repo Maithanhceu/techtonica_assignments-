@@ -8,14 +8,14 @@ CREATE TABLE IF NOT EXISTS events (
 
 -- Add the `event_location` column if it does not already exist
 ALTER TABLE events
-ADD COLUMN IF NOT EXISTS event_location VARCHAR(100);
+ADD COLUMN IF NOT EXISTS event_description VARCHAR(100);
 
 -- Insert data with conflict handling
 INSERT INTO events (name, event_date, event_location, event_description)
 VALUES
-    ('Mai Code Challenge', '1945-05-05', 'London, United Kingdom'),
-    ('Meet and Greet', '2024-11-13', 'Brooklyn, New York'),
-    ('Lecture on Collaborating and Sharing', '1989-11-19', 'Berlin, Germany')
+    ('Mai Code Challenge', '1945-05-05', 'London, United Kingdom', null),
+    ('Meet and Greet', '2024-11-13', 'Brooklyn, New York', null),
+    ('Lecture on Collaborating and Sharing', '1989-11-19', 'Berlin, Germany', null)
 ON CONFLICT (name) DO UPDATE
 SET event_date = EXCLUDED.event_date,
     event_location = EXCLUDED.event_location
