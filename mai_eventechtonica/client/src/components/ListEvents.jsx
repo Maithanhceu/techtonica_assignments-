@@ -58,7 +58,7 @@ const ListEvents = () => {
                 <ul>
                     {event.map((item) => (
                         <li key={item.id}>
-                            <Events event={item} toDelete={onDelete} toUpdate={onUpdate} />
+                            <Events event={item} toDelete={onDelete} toUpdate={onUpdate}/>
                         </li>
                     ))}
                 </ul>
