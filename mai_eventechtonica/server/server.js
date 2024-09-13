@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     res.json({ message: 'Hola, from My template ExpressJS with React-Vite' });
 });
 
-// Create the GET request for events at the endpoint '/events'
+// Create the GET request for events at the endpoint '/api/events'
 app.get('/events', async (req, res) => {
     try {
         const { rows: events } = await db.query('SELECT * FROM events');
@@ -33,7 +33,7 @@ app.post('/events', async (req, res) => {
             event_description: req.body.event_description,
         };
         const result = await db.query(
-            'INSERT INTO events(name, event_date, event_location) VALUES($1, $2, $3) RETURNING *',
+            'INSERT INTO events(name, event_date, event_location, event_description) VALUES($1, $2, $3, $4) RETURNING *',
             [newEvent.name, newEvent.event_date, newEvent.event_location, newEvent.event_description]
         );
         res.json(result.rows[0]);
