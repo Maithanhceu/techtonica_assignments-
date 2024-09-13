@@ -2,15 +2,18 @@ import React, { useState, useEffect } from 'react';
 import * as ioicons from 'react-icons/io5';
 import MyForm from './Form';
 import Events from './Event';
-import './ListEvents.css'
+import './ListEvents.css';
+import SearchMonth from './SearchMonth';
 
 const ListEvents = () => {
-
     // State for storing the list of events
     const [event, setEvent] = useState([]);
 
     // State for handling the event currently being edited
     const [editingEvent, setEditingEvent] = useState(null);
+
+    // State for filtering by month
+    const [filteredEvent, setFilteredEvents] = useState([]);
 
     // Function to fetch the list of events from the server
     const loadEvents = () => {
@@ -18,6 +21,7 @@ const ListEvents = () => {
             .then((response) => response.json())
             .then((data) => {
                 setEvent(data);
+                setFilteredEvents(data);
             });
     };
 
@@ -52,16 +56,33 @@ const ListEvents = () => {
         setEditingEvent(toUpdateEvent);
     };
 
+    // Function to filter by selected month
+    const handleSearchMonth = (month) => {
+        if (month) {
+            const filtered = event.filter(item => {
+                const date = new Date(item.event_date);
+                const eventYear = date.getFullYear();
+                const eventMonth = String(date.getMonth() + 1).padStart(2, '0');
+                const formattedDate = `${eventYear}-${eventMonth}`; // Fixed formatting
+                return formattedDate === month;
+            });
+            setFilteredEvents(filtered);
+        } else {
+            setFilteredEvents(event);
+        }
+    };
+
     return (
         <div className="mybody">
             <div className="list-events">
                 <h2>Upcoming Events</h2>
                 <ul>
-                    {event.map((item) => (
+                    <SearchMonth onMonthChange={handleSearchMonth} />
+                    {filteredEvent.map((item) => (
                         <li key={item.id}>
                             <Events event={item} 
-                            toDelete={onDelete} 
-                            toUpdate={onUpdate}/>
+                                    toDelete={onDelete} 
+                                    toUpdate={onUpdate} />
                         </li>
                     ))}
                 </ul>
