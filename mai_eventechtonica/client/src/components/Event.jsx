@@ -22,8 +22,8 @@ const Events = ({event, toUpdate, toDelete}) => {
             <Card.Body>
             <Card.Title>{event.name}</Card.Title>
             <Card.Text> Event Description: {event.event_description}</Card.Text>
-            <Button variant="outline-danger" onClick={()=>{onDelete(event)}} style={{padding: '0.6em', marginRight:'0.9em'}}><ioicons.IoTrash/></Button>
-            <Button variant="outline-info" onClick={()=>{onUpdate(event)}} style={{padding: '0.6em'}}> <ioicons.IoSync/></Button>
+            <Button variant="outline-danger" onClick={()=>{onDelete(event)}} style={{padding: '0.6em', marginRight:'0.9em'}}> Delete Event <ioicons.IoTrash/></Button>
+            <Button variant="outline-info" onClick={()=>{onUpdate(event)}} style={{padding: '0.6em'}}> Edit Event <ioicons.IoSync/></Button>
             </Card.Body>
         </Card>
     )
