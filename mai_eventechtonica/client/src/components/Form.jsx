@@ -88,7 +88,7 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
                 />
             </Form.Group>
             <Form.Group>
-                <Form.Label>Event Date</Form.Label>
+                <Form.Label className= 'Event Date'>Event Date</Form.Label>
                 <input
                     type="date"
                     id="add-event-date"
@@ -99,7 +99,7 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
                 />
             </Form.Group>
             <Form.Group>
-                <Form.Label>Event Location</Form.Label>
+                <Form.Label className='Event-Location'>Event Location</Form.Label>
                 <input
                     type="text"
                     id="add-event-location"
@@ -110,7 +110,7 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
                 />
             </Form.Group>
             <Form.Group>
-                <Form.Label> Description </Form.Label>
+                <Form.Label className = 'Description'> Description </Form.Label>
                 <input
                     type="text"
                     id="add-event-description"
