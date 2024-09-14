@@ -1,0 +1,19 @@
+.searchbymonth {
+    display: flex;
+    flex-direction:ccolumn;
+    gap: 8px;
+    width: 50%;
+    padding: 10px;
+}
+
+.searchbymonth label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.searchbymonth input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 2px solid #e384e2;
+    border-radius: 4px;
+}

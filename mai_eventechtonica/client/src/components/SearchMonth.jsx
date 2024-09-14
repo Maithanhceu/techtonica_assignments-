@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import './SearchMonth.css'
 
 const initialState = {
     searchMonth: '',
@@ -31,7 +32,7 @@ const SearchMonth = ({ onMonthChange }) => {
             <label htmlFor="search-month">Search by Month:</label>
             <input
                 type="month"
-                id="search-month"
+                id="search-month-input"
                 value={state.searchMonth}
                 onChange={handleSearchMonth}
                 placeholder="Search by Month"

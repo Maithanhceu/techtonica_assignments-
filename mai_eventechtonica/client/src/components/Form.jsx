@@ -75,9 +75,9 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
     };
 
     return (
-        <Form className='form-events' onSubmit={handleSubmit}>
+        <Form className='form-events' onSubmit={handleSubmit}> Add an Event
             <Form.Group>
-                <Form.Label>Event Name</Form.Label>
+                <Form.Label className='Event-Name'>Event Name</Form.Label>
                 <input
                     type="text"
                     id="add-event-name"
@@ -88,7 +88,7 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
                 />
             </Form.Group>
             <Form.Group>
-                <Form.Label className= 'Event Date'>Event Date</Form.Label>
+                <Form.Label className='Event-Date'>Event Date</Form.Label>
                 <input
                     type="date"
                     id="add-event-date"
