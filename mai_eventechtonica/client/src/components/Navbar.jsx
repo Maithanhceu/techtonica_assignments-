@@ -1,21 +1,21 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Logo from '../assets/BlueTechtonicaWord.png'
+import Logo from '../assets/Mai_logo.png'
+import './Navbar.css'
 
 
 function MyNavBar(props) {
 
   return (
     <>
-    <Navbar bg="dark" variant="dark" sticky="top">
+    <Navbar className='Navbar'>
       <Container>
         <Navbar.Brand href="/">
         <img
               src={Logo}
-              height="30"
-              className="d-lg-inline-block"
-              alt="React Bootstrap logo"
+              className="Mai_Logo"
+              alt="Mai Logo"
             />
         </Navbar.Brand>
         <Nav.Link >Your Link</Nav.Link>

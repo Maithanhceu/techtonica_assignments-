@@ -1,0 +1,25 @@
+/* Navbar.css */
+
+/* Adjust navbar padding to accommodate larger logo */
+.Navbar {
+    background-color: #5282eb; /* Dark background color */
+    padding: 10px 20px; /* Adjust horizontal padding if needed */
+  }
+  
+  /* Logo styling */
+  .Mai_Logo {
+    height: 75px; /* Increase the logo height */
+    transform: scale(1.8);
+    transform-origin: center; /* Center the scaling effect */
+    padding-left: 110px;
+    padding-right: 30px;
+    padding-inline: center;
+    align-items:center;
+    width: auto; /* Maintain aspect ratio */
+  }
+
+  .Navbar .navbar-brand {
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+  }
+  
