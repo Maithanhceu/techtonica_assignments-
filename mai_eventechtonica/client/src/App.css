@@ -1,6 +1,6 @@
 .App {
   min-height: 100vh;
-  background-color: rgb(238, 232, 232);
+  background-color: rgb(171, 202, 249);
   margin: 5px;
 }
 
@@ -52,7 +52,7 @@ button.btn.btn-primary {
 }
 
 .myicon {
-  stroke: rgb(243, 121, 7);
+  stroke: rgb(214, 198, 182);
   color: rgb(243, 121, 7);
   stroke-width: 10;
   margin-right: 0.9em;
