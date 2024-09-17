@@ -77,7 +77,7 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
     return (
         <Form className='form-events' onSubmit={handleSubmit}> Add an Event
             <Form.Group>
-                <Form.Label className='Event-Name'>Event Name</Form.Label>
+                <Form.Label for='Name'className='Event-Name'>Event Name</Form.Label>
                 <input
                     type="text"
                     id="add-event-name"
@@ -88,7 +88,7 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
                 />
             </Form.Group>
             <Form.Group>
-                <Form.Label className='Event-Date'>Event Date</Form.Label>
+                <Form.Label for='Event-Date' className='Event-Date'>Event Date</Form.Label>
                 <input
                     type="date"
                     id="add-event-date"
@@ -99,7 +99,7 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
                 />
             </Form.Group>
             <Form.Group>
-                <Form.Label className='Event-Location'>Event Location</Form.Label>
+                <Form.Label for='Event-Location' className='Event-Location'>Event Location</Form.Label>
                 <input
                     type="text"
                     id="add-event-location"
@@ -110,7 +110,7 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
                 />
             </Form.Group>
             <Form.Group>
-                <Form.Label className = 'Description'> Description </Form.Label>
+                <Form.Label for='Description' className = 'Description'> Description </Form.Label>
                 <input
                     type="text"
                     id="add-event-description"
