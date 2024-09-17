@@ -7,7 +7,8 @@
 
 # Libraries/Technologies: 
 [![My Skills](https://skillicons.dev/icons?i=js,html,css,react,postgres,nodejs,jest,vite)](https://skillicons.dev)
-[![SQL](https://skillicons.dev/icons?i=sql)](https://skillicons.dev)
+[![SQL](https://skillicons.dev/icons?i=sql
+)](https://skillicons.dev)
 
 # Installation: 
 To install and run this locally, follow these steps:
