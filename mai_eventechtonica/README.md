@@ -6,7 +6,7 @@
 - Frontend: React JavaScript 
 
 # Libraries/Technologies: 
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,react,postgres,sql,nodejs,jest,vite)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,react,postgres,nodejs,jest,vite)]![SQL](https://skillicons.dev/icons?i=sql)(https://skillicons.dev)
 
 # Installation: 
 To install and run this locally, follow these steps:
