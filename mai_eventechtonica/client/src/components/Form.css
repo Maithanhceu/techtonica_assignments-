@@ -1,9 +1,19 @@
 .form-events {
     max-width: 100%; 
-    margin: 0 auto; 
+    margin: 10px ; 
     padding: 20px; 
+    background-color: rgb(174, 215, 252);
+    border-radius: 10px;
+    height: 350px;
 }
 
+.Event-Date {
+    margin-bottom: 10px;
+}
+
+.Event-Name {
+    margin-bottom: 10px;
+}
 button[type="button"] {
     background-color: #dc6a6a;
     border-color: #2407ff;

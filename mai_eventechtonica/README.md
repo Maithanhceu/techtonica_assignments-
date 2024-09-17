@@ -6,13 +6,7 @@
 - Frontend: React JavaScript 
 
 # Libraries/Technologies: 
-- React - with Vite
-- JavaScript / Node.js
-- Express
-- SQL
-- Postgres
-- Jest
-- React Testing Library
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,react,postgres,sql,node.js,jest,vite)](https://skillicons.dev)
 
 # Installation: 
 To install and run this locally, follow these steps:

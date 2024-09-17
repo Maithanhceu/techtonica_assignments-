@@ -1,5 +1,13 @@
 .list-events {
     max-width: 1000px;
+    margin: center; 
+    
+}
+
+.list-events li {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid #e384e2;
 }
 .header1 {
     padding-left: 30px;
