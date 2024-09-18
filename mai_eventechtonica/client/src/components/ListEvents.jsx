@@ -63,7 +63,7 @@ const ListEvents = () => {
                 const date = new Date(item.event_date);
                 const eventYear = date.getFullYear();
                 const eventMonth = String(date.getMonth() + 1).padStart(2, '0');
-                const formattedDate = `${eventYear}-${eventMonth}`;
+                const formattedDate = `${eventYear}-${eventMonth}`; // Fixed formatting
                 return formattedDate === month;
             });
             setFilteredEvents(filtered);
@@ -75,10 +75,10 @@ const ListEvents = () => {
     return (
         <div className="mybody">
             <div className="list-events">
-                <h2 className="header1">Upcoming Events</h2>
+                <h2>Upcoming Events</h2>
                 <ul>
                     {/* what I added outside of Cristina's code  */}
-                    <SearchMonth className='search-bar'onMonthChange={handleSearchMonth} />
+                    <SearchMonth onMonthChange={handleSearchMonth} />
                     {filteredEvent.map((item) => (
                         <li key={item.id}>
                             <Events event={item} 
