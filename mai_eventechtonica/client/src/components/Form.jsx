@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Form } from "react-bootstrap";
-import './Form.css'
 
 const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
 
