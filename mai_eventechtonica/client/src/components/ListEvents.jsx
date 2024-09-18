@@ -77,7 +77,6 @@ const ListEvents = () => {
             <div className="list-events">
                 <h2>Upcoming Events</h2>
                 <ul>
-                    {/* what I added outside of Cristina's code  */}
                     <SearchMonth onMonthChange={handleSearchMonth} />
                     {filteredEvent.map((item) => (
                         <li key={item.id}>
@@ -88,7 +87,6 @@ const ListEvents = () => {
                     ))}
                 </ul>
             </div>
-
             <MyForm
                 key={editingEvent ? editingEvent.id : null}
                 onSaveEvent={onSaveEvent}
