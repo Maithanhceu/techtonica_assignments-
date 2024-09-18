@@ -21,8 +21,13 @@ Navigate to the project directory and install the required dependencies, then st
 `npm install`
 `npm run dev`
 
-# Open the  in the browser. 
+# Open the  in the browser:
 You should see the following EventForm: 
+![Giphy](https://media.giphy.com/media/e329WT6qRsiGp61kyz/giphy.gif)
+
+# You can add and delete events:
+![Giphy](https://media.giphy.com/media/ABn781UWqpz0GjXNcl/giphy.gif)
+
 
 
 

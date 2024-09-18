@@ -19,6 +19,7 @@ const Events = ({event, toUpdate, toDelete}) => {
             <Card.Body>
             <Card.Title>{event.name}</Card.Title>
             <Card.Text> <span className="bold-and-colored">Event Description: </span>{event.event_description}</Card.Text>
+            <Card.Text> <span className="bold-and-colored">Event Date: </span>{event.event_date}</Card.Text>
             <Card.Text> <span className="bold-and-colored">Event Location: </span>{event.event_location}</Card.Text>
             {/* Add in text for the icons to help with screen readers */}
             <Button variant="outline-danger" onClick={()=>{onDelete(event)}} style={{padding: '0.6em', marginRight:'0.9em'}}> Delete Event <ioicons.IoTrash/></Button>

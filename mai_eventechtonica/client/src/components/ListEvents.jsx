@@ -73,7 +73,7 @@ const ListEvents = () => {
     };
 
     return (
-        <div className="mybody">
+        <div className="mybody" data-testid="maibody">
             <div className="list-events">
                 <h2 className="header1">Upcoming Events</h2>
                 <ul>
