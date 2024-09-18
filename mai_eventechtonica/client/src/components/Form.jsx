@@ -51,7 +51,7 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
 
     // Function to handle the PUT request for updating an existing event
     const putEvent = (toEditEvent) => {
-        return fetch(`http://localhost:8080/events/${toEditEvent.id}`, {
+        return fetch(`http://localhost:8080/api/events/${toEditEvent.id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(toEditEvent),
