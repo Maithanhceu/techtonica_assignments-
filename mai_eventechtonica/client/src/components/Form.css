@@ -3,16 +3,3 @@
     margin: 0 auto; 
     padding: 20px; 
 }
-
-button[type="button"] {
-    background-color: #dc6a6a;
-    border-color: #2407ff;
-    color: white;
-  }
-
-.custom-button{
-    background-color: #6169d3;
-    border-color: #2407ff;
-    color: white;
-    margin: 10px;
-}

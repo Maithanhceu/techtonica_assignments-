@@ -121,7 +121,7 @@ const MyForm = ({ onSaveEvent, editingEvent, onUpdateEvent }) => {
                 />
             </Form.Group>
             <Form.Group>
-                <Button type="submit" className= 'custom-button' variant="outline-success">{event.id ? "Edit Event" : "Add Event"}</Button>
+                <Button type="submit" variant="outline-success">{event.id ? "Edit Event" : "Add Event"}</Button>
                 {event.id ? <Button type="button" variant="outline-warning" onClick={clearForm}>Cancel</Button> : null}
             </Form.Group>
         </Form>
