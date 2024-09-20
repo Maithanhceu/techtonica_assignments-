@@ -1,5 +1,5 @@
 // import {useState, useEffect} from 'react'; 
-//rfce (will create a funcational component for App 
+//rfce (will create a funtional component for App)
 function App() {
   // const [message, setMessage] = 
 
