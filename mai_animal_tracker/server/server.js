@@ -27,6 +27,7 @@ app.get('/', (request, response) => {
 //What is a GET request? 
 //Fetch is a promise has two arguments (url, {method:"GET, POST, PUT, DELETE"})
 
+//this will grab all of the species table data from our db.sql file 
 app.get('/species', async (request, response) => {
     try {
         const result = await pool.query('SELECT * FROM species');
@@ -49,7 +50,6 @@ app.get('/individual', async (request, response) => {
 // A post request for adding a sighting 
 app.post('/sightings', async (request, response) => {
     const {sighting_date, sighting_location, healthy, email_address, created_at} = req.body;
-
     try {
         const result = await pool.query (
         'Insert into sightings (sighting_date, sighting_location, healthy, email_address, created_at VAlUES ($1, $2, $3) RETURNING *',
@@ -66,7 +66,6 @@ app.post('/sightings', async (request, response) => {
 app.put('/sightings/:sighting_id', async (req, res) => {
     const { sighting_id } = req.params; 
     const { sighting_date, sighting_location, healthy, email_address } = req.body;  
-  
     try {
      
       const result = await pool.query(
