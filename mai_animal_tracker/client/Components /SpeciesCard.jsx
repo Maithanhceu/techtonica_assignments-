@@ -10,7 +10,7 @@ function SpeciesCard() {
     const fetchSpeciesCard  = () => {
         fetch ("http://localhost:1113/species")
         .then (response => response.json())
-        .then (data => c )
+        .then (data => c )q
     }
 
 
