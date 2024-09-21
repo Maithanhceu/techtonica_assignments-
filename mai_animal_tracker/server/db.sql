@@ -18,27 +18,27 @@ CREATE TABLE IF NOT EXISTS species (
 INSERT INTO species (common_name, scientific_name, estimated_number, conservation_status, created_at)
 VALUES 
     ('Chappell Roan Cat', 'Catsual', 2, 'CC', CURRENT_TIMESTAMP),
-    ('Yeah Yeah Yeahs Yapping Yak', 'Yeah, Yeah, No', 1, 'YYY', CURRENT_TIMESTAMP), 
+    ('Yeah Yeah Yeahs Yapping Yak', 'Yeah, Yeah, No', 1, 'YYY'), 
     ('The Raven Poe', 'Poe-try', 2, 'RP', CURRENT_TIMESTAMP), 
     ('Fergie Butterfly', 'Fergalicious', 1, 'FB', CURRENT_TIMESTAMP);
 
--- Create individual_animals table
+-- Create individual_animals table with species_id
 CREATE TABLE IF NOT EXISTS individual_animals (
-    species_id integer NOT NULL, 
     individual_id serial PRIMARY KEY, 
+    species_id integer NOT NULL,  -- Add species_id here
     nickname varchar(500) NOT NULL, 
     scientist varchar(500) NOT NULL, 
     created_at timestamp NOT NULL, 
     FOREIGN KEY (species_id) REFERENCES species(species_id)
 );
 
--- Insert values into individual_animals
+-- Insert values into individual_animals using subqueries to get species_id
 INSERT INTO individual_animals (species_id, nickname, scientist, created_at)
 VALUES 
-    (1, 'Chapel Cat', 'Cat Scientist', CURRENT_TIMESTAMP),
-    (2, 'Yasss', 'MAPS', CURRENT_TIMESTAMP),
-    (3, 'Poet', 'Edgar', CURRENT_TIMESTAMP),
-    (4, 'Fergie', 'Galicious', CURRENT_TIMESTAMP);
+    ((SELECT species_id FROM species WHERE common_name = 'Chappell Roan Cat'), 'Chapel Cat', 'Cat Scientist', CURRENT_TIMESTAMP),
+    ((SELECT species_id FROM species WHERE common_name = 'Yeah Yeah Yeahs Yapping Yak'), 'Yasss', 'MAPS', CURRENT_TIMESTAMP),
+    ((SELECT species_id FROM species WHERE common_name = 'The Raven Poe'), 'Poet', 'Edgar', CURRENT_TIMESTAMP),
+    ((SELECT species_id FROM species WHERE common_name = 'Fergie Butterfly'), 'Fergie', 'Galicious', CURRENT_TIMESTAMP);
 
 -- Select to join species with individual_animals
 SELECT *
@@ -47,8 +47,8 @@ JOIN individual_animals
     ON species.species_id = individual_animals.species_id;
 
 -- Create sightings table
-CREATE TABLE IF NOT EXISTS sightings (
-    sighting_id serial primary key,
+CREATE TABLE IF NOT EXISTS animal_sighting (
+    sighting_id serial PRIMARY KEY,  -- Add a primary key for animal_sighting
     sighting_date timestamp NOT NULL,
     individual_id integer NOT NULL,
     sighting_location text NOT NULL,
@@ -59,15 +59,17 @@ CREATE TABLE IF NOT EXISTS sightings (
 );
 
 -- Insert values into sightings
--- Ensure individual_id matches the individual_animals table
-INSERT INTO sightings (sighting_date, individual_id, sighting_location, healthy, email_address, created_at)
+INSERT INTO animal_sighting (sighting_date, individual_id, sighting_location, healthy, email_address, created_at)
 VALUES 
-    (01-05-2025,'Missouri', TRUE, 'chappellcat@yahoo.com', CURRENT_TIMESTAMP),
-    (13-11-1995,'San Francisco', TRUE, 'yasssscientist@maps.com', CURRENT_TIMESTAMP),
-    (19-09-2024,'Brooklyn', FALSE, 'horrorgurl@gmail.com', CURRENT_TIMESTAMP); 
-    (11-07-1998, 'Butterfly Park', FALSE, 'fergiespotter@gmail.com', CURRENT_TIMESTAMP);
+    ('2025-05-01', (SELECT individual_id FROM individual_animals WHERE nickname = 'Chapel Cat'), 'Missouri', TRUE, 'chappellcat@yahoo.com', CURRENT_TIMESTAMP),
+    ('1995-11-13', (SELECT individual_id FROM individual_animals WHERE nickname = 'Yasss'), 'San Francisco', TRUE, 'yasssscientist@maps.com', CURRENT_TIMESTAMP),
+    ('2024-09-19', (SELECT individual_id FROM individual_animals WHERE nickname = 'Poet'), 'Brooklyn', FALSE, 'horrorgurl@gmail.com', CURRENT_TIMESTAMP),
+    ('1998-07-07', (SELECT individual_id FROM individual_animals WHERE nickname = 'Fergie'), 'Butterfly Park', FALSE, 'fergiespotter@gmail.com', CURRENT_TIMESTAMP);
 
+-- Select to join individual_animals with animal_sighting
 SELECT *
 FROM individual_animals
-JOIN sightings
-    ON individual_animals.individual_id= sightings.individual_id;
+JOIN animal_sighting
+    ON individual_animals.individual_id = animal_sighting.individual_id;
+
+
