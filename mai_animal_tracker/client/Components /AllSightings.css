@@ -1,0 +1,11 @@
+.sighting {
+    background-color: rgb(84, 116, 220);
+    padding: 2rem;
+    border-radius: 2rem;
+    color:rgb(244, 242, 242); 
+    margin: 2rem;
+}
+
+.button {
+    background-color: rgb(222, 110, 185);
+}

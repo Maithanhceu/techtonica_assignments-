@@ -48,7 +48,7 @@ JOIN individual_animals
 
 -- Create sightings table
 CREATE TABLE IF NOT EXISTS animal_sighting (
-    sighting_id serial PRIMARY KEY,  -- Add a primary key for animal_sighting
+    sighting_id serial PRIMARY KEY,  
     sighting_date timestamp NOT NULL,
     individual_id integer NOT NULL,
     sighting_location text NOT NULL,
