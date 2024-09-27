@@ -24,6 +24,8 @@ function contactReducer(contacts, action) {
             return { ...contacts, notes: action.payload };
         case 'SET_QUOTES':
             return { ...contacts, quotes: action.payload };
+        case 'SET_VIBE':
+            return {...contacts, vibe: action.payload};
         case 'RESET':
             return initialState;
         default:
@@ -44,6 +46,7 @@ function CreateContact() {
             phone: state.phone,
             notes: state.notes,
             quotes: state.quotes,
+            vibe: state.vibe
         };
 
         try {
@@ -102,6 +105,12 @@ function CreateContact() {
                 onChange={(e) => dispatch({ type: 'SET_QUOTES', payload: e.target.value })}
                 placeholder="Quotes"
                 className="input" />
+            <input
+                value={state.vibe}
+                onChange={(e) => dispatch({ type: 'SET_VIBE', payload: e.target.value })}
+                placeholder="vibe"
+                className='input'
+            />
             <button type="submit">Add Contact</button>
         </form></>
     );

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 // import ViewContact from './components/ViewContact';
 import Contacts from "../components/Contacts";
 import CreateContact from "../components/CreateContact";
+import ViewContact from "../components/ViewContact";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -22,9 +23,9 @@ function App() {
 
   return (
     <div>
-      {/* <ViewContact contacts={contacts} /> */}
       <Contacts contacts={contacts} /> 
       <CreateContact contacts={contacts} />
+      <ViewContact contacts={contacts} />
     </div>
   );
 }
