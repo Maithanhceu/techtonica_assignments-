@@ -1,6 +1,7 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Icon from "./Icon.jsx";
+import MyMap from './MyMap.jsx';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -8,44 +9,49 @@ function App() {
   const [error, setError] = useState('');
 
   const searchPressed = async () => {
+  
     if (search.trim() === '') {
       setError('Please enter a location. :)');
-      setWeatherData(null);
       return;
     }
 
     try {
-      const response = await fetch (`http://localhost:5000/weather/${search}`);
+      const response = await fetch(`http://localhost:5000/weather/${search}`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
       const data = await response.json();
       setWeatherData(data);
-      setError('');
-
     } catch (error) {
-      setError('Error fetching weather data.');
-      setWeatherData(null);
+      setError('Error fetching weather data. Please try again later.');
       console.error('Error fetching weather data:', error);
     }
   };
 
+  // Effect to manage weather data fetching error state
+  useEffect(() => {
+    if (error) {
+      console.error('Error in App:', error); // Log error details for debugging
+    }
+  }, [error]); // Runs when `error` state changes
+
   return (
     <div className='App'>
       <header className='App-header'>
-        <h1> Weather App</h1>
-        <div>
-          {/* Parent component to child */}
-          {weatherData && (
-            <Icon iconCode={weatherData.weather[0].icon} />
-          )}
-          <input
+        <h1>Weather App</h1>
+        
+        {/* Icon is rendered only if weather data is available */}
+        {weatherData && weatherData.weather[0].icon && (
+              <Icon iconCode={weatherData.weather[0].icon} />
+        )}
 
-            type="text"
-            placeholder="Ex. Vienna, Budapest, Hasselt, and New Orleans"
-            onChange={(event) => setSearch(event.target.value)}
-          />
+        <MyMap setSearch={setSearch} />
+
+        <div>
           <button onClick={searchPressed}>Search</button>
         </div>
 
-        {error && <p>{error}</p>}
+        {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error message if any */}
 
         {weatherData && (
           <div className="weather-info">
@@ -61,4 +67,3 @@ function App() {
 }
 
 export default App;
-
