@@ -26,34 +26,46 @@ app.get('/api', async (req, res) => {
     res.send('Hello from the API!');
 });
 
-app.get('/mai_contacts', async (request, response) => 
-    {
-        try {
-            const result = await pool.query ('SELECT * FROM mai_contacts');
-            response.json(result.rows)
-            
-        } catch (error) {
-            console.error("Error fetching data :(", error)
-            response.status(500).send("Internal Server Error");
-            
-        }
+app.get('/mai_contacts', async (request, response) => {
+    try {
+        const result = await pool.query
+            (`SELECT 
+            c.contactid,
+                c.name,
+                c.email,
+                c.phone,
+                c.notes,
+                c.quotes,
+                v.vibe
+        FROM 
+            mai_contacts c
+        LEFT JOIN 
+            vibe v ON c.contactid = v.contactid `)
+
+        response.json(result.rows)
+
+    } catch (error) {
+        console.error("Error fetching data :(", error)
+        response.status(500).send("Internal Server Error");
+
     }
+}
 )
 
-app.post ('/maiAdd', async (requst, response) => {
-    const {name, email, phone, notes, quotes} = req.body; 
+app.post('/maiAdd', async (requst, response) => {
+    const { name, email, phone, notes, quotes, vibe } = req.body;
 
     try {
         const result = await pool.query(
-            'INSERT INTO mai_contacts (name, email, phone, notes, quotes) VALUES ($1, $2, $3, $4, $5) RETURNING *',
-            [name, email, phone, notes, quotes]
-          );
+            'INSERT INTO mai_contacts (name, email, phone, notes, quotes) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *',
+            [name, email, phone, notes, quotes, vibe]
+        );
         response.status(201).json(result.rows[0]);
-          
+
     } catch (error) {
-        console.error (error);
-        response.status(500).json ({error: 'An error occurred while adding the contact.' })
-        
+        console.error(error);
+        response.status(500).json({ error: 'An error occurred while adding the contact.' })
+
     }
 })
 app.listen(5000, () => {

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function ViewContact({contacts}) {
     const [showFullList, setShowFullList] = useState(false); 
 
@@ -21,6 +23,7 @@ function ViewContact({contacts}) {
                             <p>Phone: {individualContact.phone}</p>
                             <p>Notes: {individualContact.notes}</p>
                             <p>Quotes: {individualContact.quotes}</p>
+                            <p>Vibe: {individualContact.vibe}</p>
                         </form>
                     ))}
                 </div>
