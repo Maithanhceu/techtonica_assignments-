@@ -1,0 +1,23 @@
+
+  .input {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem; 
+    margin: 1rem;
+    align-items: center;
+    width: 50%;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: blue; /* Change button color to blue */
+    color: white; 
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+  

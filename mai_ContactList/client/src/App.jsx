@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-// import ViewContact from './components/ViewContact';
 import Contacts from "../components/Contacts";
 import CreateContact from "../components/CreateContact";
 import ViewContact from "../components/ViewContact";
+import './App.css';
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -22,11 +22,18 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <Contacts contacts={contacts} /> 
-      <CreateContact contacts={contacts} />
-      <ViewContact contacts={contacts} />
-    </div>
+    <><h1 className="header">Hi, Welcome to Mai Contact List</h1>
+    <div className="app-container">
+      <div className="contacts-section">
+        <Contacts contacts={contacts} />
+      </div>
+      <div className="create-contact-section">
+        <CreateContact contacts={contacts} />
+      </div>
+      <div className="view-contact-section">
+        <ViewContact contacts={contacts} />
+      </div>
+    </div></>
   );
 }
 
