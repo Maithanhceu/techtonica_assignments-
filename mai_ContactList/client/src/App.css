@@ -1,42 +1,22 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.header{
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.app-container {
+  display: flex; 
+  justify-content: space-evenly;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in width calculations */
+  background-color: rgb(109, 137, 207);
+  border-width: 2rem; 
+  border-style: solid; 
+  border-color: aliceblue; 
+
+.contacts-section,
+.create-contact-section,
+.view-contact-section {
+  flex: 1; 
+  margin: 0 10px; 
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}

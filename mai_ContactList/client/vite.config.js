@@ -19,6 +19,18 @@ export default defineConfig({
         target: 'http://localhost:5000',
         changeOrigin: true,
       },
+      '/mai_contacts/:id': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+      '/mai_add/:id': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
     },
   },
+  test: {
+    globals: true,
+    environment: 'jdom',
+  }
 });

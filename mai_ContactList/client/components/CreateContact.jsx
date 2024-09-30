@@ -1,4 +1,5 @@
 import { useReducer } from 'react';
+import './CreateContact.css'
 
 const initialState = {
     contactid: '',
@@ -71,12 +72,6 @@ function CreateContact() {
     return (
         <><h2>Create Contact</h2>
         <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                value={state.contactid}
-                onChange={(e) => dispatch({ type: 'SET_CONTACTID', payload: e.target.value })}
-                placeholder="Contact ID"
-                className="input" />
             <input
                 type="text"
                 value={state.name}
