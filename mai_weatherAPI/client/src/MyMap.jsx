@@ -3,29 +3,42 @@ import { useRef, useState, useEffect } from "react";
 
 function MyMap({ setSearch }) {
   const inputRef = useRef(null);
-  const { isLoaded} = useJsApiLoader({
+  const [mapError, setMapError] = useState('');
+  const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyDXYuobPuPmLYTAFkzcptwU362ZqBYh4PQ',
+    googleMapsApiKey: '',
     libraries: ["places"],
   });
+
+  useEffect(() => {
+    if (loadError) {
+      setMapError('Error loading Google Maps. Please try again later.');
+      console.error('Map loading error:', loadError);
+    }
+  }, [loadError]);
 
   const handleOnPlacesChanged = () => {
     const places = inputRef.current.getPlaces();
     if (places.length > 0) {
-      setSearch(places[0].formatted_address); 
+      setSearch(places[0].formatted_address); // Set the search input based on selected place
     }
   };
 
   return (
     <div>
+      {mapError && <p style={{ color: 'red' }}>{mapError}</p>}
       {isLoaded && (
         <StandaloneSearchBox 
           onLoad={(ref) => (inputRef.current = ref)} 
           onPlacesChanged={handleOnPlacesChanged}
+          options={{
+            componentRestrictions: { country: 'us' }, // Restrict to US cities (can adjust to your needs)
+            types: ['(cities)'], // This will restrict the search to city types
+          }}
         >
           <input
             type='text'
-            placeholder="Type a city name..."
+            placeholder="Example: Paris, Berlin, Chicago, etc."
           />
         </StandaloneSearchBox>
       )}
