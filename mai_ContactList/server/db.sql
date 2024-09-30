@@ -18,7 +18,7 @@ VALUES
 
 CREATE TABLE IF NOT EXISTS vibe (
     vibeid SERIAL PRIMARY KEY,    
-    contactid INT NOT NULL,        
+    contactid,        
     vibe TEXT NOT NULL,             
     FOREIGN KEY (contactid) REFERENCES mai_contacts(contactid) 
 );
