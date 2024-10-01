@@ -3,7 +3,7 @@
 
 # Frameworks: 
 - Backend: ExpressJS, Node.js, SQL Postgres
-- Frontend: React JavaScript 
+- Frontend: React, Vite, JavaScript 
 
 # Libraries/Technologies: 
 [![My Skills](https://skillicons.dev/icons?i=js,html,css,react,postgres,nodejs,jest,vite)](https://skillicons.dev)
