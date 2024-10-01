@@ -4,15 +4,7 @@ import CreateContact from "../components/CreateContact";
 import ViewContact from "../components/ViewContact";
 import './App.css';
 
-function App() {
-  const [contacts, setContacts] = useState([]);
-
-  useEffect(() => {
-    const fetchContacts = async () => {
-      try {
-        const response = await fetch('/api/mai_contacts');
-        const data = await response.json();
-        setContacts(data);
+function App() { 
       } catch (error) {
         console.error('Error fetching contacts:', error);
       }
