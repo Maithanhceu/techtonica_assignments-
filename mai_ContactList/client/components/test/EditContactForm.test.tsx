@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import EditContactForm from '../EditContactForm'; 
-import { describe, it, expect, beforeEach,} from 'vitest';
+import EditContactForm from '../EditContactForm';
+import { describe, it, expect, beforeEach, } from 'vitest';
 
 describe('EditContactForm', () => {
     const mockItem = {
@@ -12,14 +12,11 @@ describe('EditContactForm', () => {
         quotes: 'Keep smiling',
         vibe: 'Positive',
     };
-
     beforeEach(() => {
-        render(<EditContactForm item={mockItem} onUpdate={() => {}} onDelete={() => {}} />);
+        render(<EditContactForm item={mockItem} onUpdate={() => { }} onDelete={() => { }}/>);
     });
-
     it('renders the update button', () => {
         const updateButton = screen.getByRole('button', { name: /Update Contact/i });
-        expect(updateButton).to.exist; 
+        expect(updateButton).to.exist;
     });
-
 });
