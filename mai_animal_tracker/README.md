@@ -13,7 +13,7 @@ To install and run this locally, follow these steps:
 
 # Clone the Repository: 
 First, clone the repository to your local machine using the following command: 
-`git clone `
+`git clone https://github.com/Maithanhceu/techtonica_assignments-/tree/2a5c66ef8c93119a33b5e5681720a896084d1171/mai_animal_tracker `
 
 # Install Dependencies and Run the Server:
 Navigate to the project directory and install the required dependencies, then start the development server using the following commands:
