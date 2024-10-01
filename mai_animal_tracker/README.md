@@ -22,7 +22,7 @@ Navigate to the project directory and install the required dependencies, then st
 `npm run dev`
 
 # Open the  in the browser and you should see the following AnimalForm: 
-![Front of my Form
+![Front of my Form]
 (https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExczhrbmY1c2FtMHE3M3hlN28wbmxtaDcyeWQyZGIxMzlvZjVrcnkxOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3tdux2fviGR2X64Ala/giphy.gif)
 
 # You can add and delete events:
