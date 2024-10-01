@@ -24,5 +24,5 @@ Navigate to the project directory and install the required dependencies, then st
 # Open the  in the browser and you should see the following AnimalForm: 
 ![Front of my Form](https://media.giphy.com/media/3tdux2fviGR2X64Ala/giphy.gif)
 
-# You can add and delete events:
+# You can edit a tracking:
 ![Editing the Form](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3ZxbTBjM2R4OWx5YWpybGl2cjZ3cDZsNWc3enU2cXZ0cDNtenlmMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rEysEfp7wQjMse4D1W/giphy.gif)
