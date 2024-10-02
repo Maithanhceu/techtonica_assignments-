@@ -29,3 +29,5 @@ Navigate to the project directory and install the required dependencies, then st
 
 # You can add a blog entry: 
 
+# Flex Goals: 
+A playlist that allows users to have a more personal experience as they listen to all the music from my travels. 

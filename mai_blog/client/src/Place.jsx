@@ -28,7 +28,7 @@ function Place({ data }) {
             ))}
             <button onClick={handleClearSelection}>Clear Selection</button>
             {/* selectedBlog and location prop passed to the component Card */}
-            <Card selectedBlog={selectedBlog} location={location} handleClearSelection={handleClearSelection} />
+            <Card selectedBlog={selectedBlog} location={location}/>
         </div>
     );
 }

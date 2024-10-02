@@ -1,29 +1,29 @@
+import { useState } from "react";
 import Image from "./Image";
-import './Card.css'; // Make sure to import your CSS file
+import './Card.css'; 
 
-function Card({ selectedBlog, location, handleClearSelection }) {
-    const titleText = () => {
-        if (handleClearSelection === true) {
-            return null; 
-        } else {
-            return `Hello from ${location}`
-        }
-    }
+function Card({ selectedBlog, location}) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleCardClick = () => {
+    setIsFlipped(!isFlipped); 
+  };
+
   return (
-    <div className="postCard">
-      <div className="postText">
-        <h2>{titleText}</h2>
-        <div className="postContent">
-          <h3>{selectedBlog}</h3>
-        </div>
-      </div>
-      <div className="divider"></div> 
-      <div className="postImage">
-        <Image location={location} />
+    <div className={`postCard ${isFlipped ? 'flipped' : ''}`} onClick={handleCardClick}>
+      <div className="postCard">
+        {!isFlipped ? (
+          <>
+            <div>
+              <h3 className="blogEntrie">{selectedBlog}</h3> 
+            </div>
+          </>
+        ) : (
+          <Image location={location} /> 
+        )}
       </div>
     </div>
   );
 }
 
 export default Card;
-

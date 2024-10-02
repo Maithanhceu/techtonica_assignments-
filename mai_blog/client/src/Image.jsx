@@ -1,51 +1,51 @@
-import Jean_Paul from "./Photos";
-import Vancouver from "./Photos";
+import { useState, useEffect } from "react";
 
-//prop from Place Component 
 function Image({ location }) {
+    const [imageContent, setImageContent] = useState(null);
 
-    function handleOnClick ( location){
+    const setContent = () => {
         if (location === "Paris") {
-            return (
-                <div>
-                    <img src="Jean_Paul"alt="Paris" />
+            setImageContent(
+                <div className="image-container">
+                    <img src='./Jean_Paul.jpg' alt="Paris" />
                     <p>This is an image of Paris.</p>
                 </div>
             );
-        }
-    
-        if (location === "Vancouver") {
-            return (
-                <div>
-                    <img src="Vancouver" alt="Vancouver" />
-                    <p>This is an image of New York.</p>
+        } else if (location === "Vancouver") {
+            setImageContent(
+                <div className="image-container">
+                    <img src="./Vancouver.jpg" alt="Vancouver" />
+                    <p>This is an image of Vancouver.</p>
                 </div>
             );
-        }
-    
-        if (location === "New Orleans") {
-            return (
-                <div>
+        } else if (location === "New Orleans") {
+            setImageContent(
+                <div className="image-container">
                     <img src="https://example.com/newyork.jpg" alt="New Orleans" />
-                    <p>This is an image of New York.</p>
+                    <p>This is an image of New Orleans.</p>
+                </div>
+            );
+        } else {
+            setImageContent(
+                <div className="image-container">
+                    <p>No image available for this location.</p>
                 </div>
             );
         }
-    }
-    
-    Image();
-    return (
-        <><div> 
-            <button onClick={handleOnClick}>
-                Click for Front of the Post Card
-            </button>
+    };
 
-        </div>
-    
+    useEffect(() => {
+        setContent(); 
+    }, [location]);
+
+    return (
         <div>
-            <p>No image available for this location.</p>
-        </div></>
+            {imageContent}
+        </div>
     );
 }
 
 export default Image;
+
+
+

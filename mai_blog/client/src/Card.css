@@ -1,33 +1,37 @@
-/* Card.css */
 .postCard {
-    display: flex; 
-    border: 2px solid #ccc;
-    border-radius: 10px; 
-    overflow: hidden;
-    width: 600px; 
-    margin: 20px auto; 
-  }
-  
-  .postText {
-    flex: 1;
-    padding: 20px; 
-    background-color: #f9f9f9; 
-  }
-  
-  .postImage {
-    width: 200px;
-  }
-  
-  .postImage img {
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
-  }
-  
-  .divider {
-    width: 2px; 
-    background-color: #ccc; 
-    height: auto;
-    align-self: stretch; 
-  }
-  
+  position: relative; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
+  background: url('./PostCard.png') no-repeat center center;
+  background-size: cover;   
+  width: 750px;
+  height: 550px;
+}
+
+.image-container {
+  position: absolute; /* Fill the parent container */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /* Ensures it stretches to all edges */
+}
+
+.image-container img {
+  width: 100%; /* Make the image fill the container */
+  height: 100%; /* Make the image fill the container */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+.blogEntrie {
+  position: relative; 
+  width: 50%; /* Take half of the container */
+  padding: 2em; 
+  overflow: hidden; /* Prevent content from overflowing */
+  max-height: 300px;
+  box-sizing: border-box; /* Include padding in the width calculation */
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding in width calculation */
+
+}
+

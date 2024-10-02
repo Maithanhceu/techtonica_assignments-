@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Place from "./Place";
-
+import EntrieForm from "./EntrieForm";
+import './App.css'
 
 function App() {
   const [data, setData] = useState([]);
@@ -29,16 +30,21 @@ function App() {
     fetchData();
   }, []); 
 
+  const smallExpoText = `If you have a hard time pronouncing my name, do not be discouraged! 
+  It's pronounced 'My', like: My Friend, My Favorite Person, or My 
+  Extraordinary, Endearing Confident.`;
+  
   return (
     <div>
       <h1>
         Mai Travel Blog! 
-        <div> If you have a hard time pronouncing my Name, do not be discouraged! 
-          It&rsquo;s pronounced "My", like: My Friend, My Favorite Person, or My 
-          Extraordinary, Endearing Confident
+        <div className="smallExpoText"> 
+          {smallExpoText}
         </div>
       </h1>
     <Place data = {data}/> 
+    <EntrieForm/>
+
     </div>
   );
 }
