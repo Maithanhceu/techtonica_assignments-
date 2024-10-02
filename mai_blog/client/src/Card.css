@@ -1,0 +1,33 @@
+/* Card.css */
+.postCard {
+    display: flex; 
+    border: 2px solid #ccc;
+    border-radius: 10px; 
+    overflow: hidden;
+    width: 600px; 
+    margin: 20px auto; 
+  }
+  
+  .postText {
+    flex: 1;
+    padding: 20px; 
+    background-color: #f9f9f9; 
+  }
+  
+  .postImage {
+    width: 200px;
+  }
+  
+  .postImage img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+  }
+  
+  .divider {
+    width: 2px; 
+    background-color: #ccc; 
+    height: auto;
+    align-self: stretch; 
+  }
+  
