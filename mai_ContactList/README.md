@@ -21,10 +21,12 @@ Navigate to the project directory and install the required dependencies, then st
 `npm install`
 `npm run dev`
 
-# Open the  in the browser and you should see the following EventForm: 
+# Open the  in the browser and you should see the following Contact: 
 ![My Contact App front screen with the rendering of the full app for users to search contacts, delete it, see full list, edit it, and also add in a new contact](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHdnZ2FhYzQ5NXo2NXU1dDYyaDV5ZjY5ZGF3dGM2bG15MjI2c3puZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1hoJYyJttfFbimJ7PH/giphy.gif)
 
-# You can add and delete an event:
+# You can add and delete an Contact:
+![A screen rendering showing users how to edit the edits from the front-end page](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzBremRqcnYydzd6aTExcWcxNHljNmdtMzlpN2Z3N3FobXh5bWV3ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aRJEuUU0IUfyCjm8jj/giphy.gif)
+
 
 
 
