@@ -1,13 +1,16 @@
 import { useState } from "react";
 
-
 function EntrieForm() {
+    // State to manage form data
     const [data, setData] = useState({
         blog: '',
-        date: '',
+        entries: '', 
         location: ''
     });
+    const [error, setError] = useState(null); 
+    const [successMessage, setSuccessMessage] = useState(null); 
 
+    // Handle input changes
     const handleChange = (e) => {
         const { id, value } = e.target;
         setData(prevData => ({
@@ -16,7 +19,8 @@ function EntrieForm() {
         }));
     };
 
-    const createEntrie = (e) => {
+    // Handle form submission
+    const createEntry = (e) => {
         e.preventDefault(); 
 
         fetch("/add", {
@@ -24,42 +28,60 @@ function EntrieForm() {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data) 
         })
-        .then(response => response.json())
-        .then(responseData => {
-            setData(responseData); 
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
         })
-        .catch(error => console.error('Error:', error)); 
+        .then(() => {
+            setData({ blog: '', entries: '', location: '' }); 
+            setError(null); 
+            setSuccessMessage('Entry created successfully!');
+            setTimeout(() => setSuccessMessage(null), 3000); 
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            setError('Failed to create entry. Please try again.'); 
+            setTimeout(() => setError(null), 3000); 
+        }); 
     };
 
     return (
         <div>
-            <form onSubmit={createEntrie} className='Blog Entrie'>
-                <h2>Entrie Form</h2>
+            <form onSubmit={createEntry} className='EntryForm'>
+                <h2>Create New Entry</h2>
+                
                 <input
                     type="text"
-                    id="blog"
+                    id="blog" 
                     placeholder="Blog Post"
                     required
                     value={data.blog}
                     onChange={handleChange}
                 />
+                
                 <input
                     type="date"
-                    id="date"
+                    id="entries" 
                     required
-                    value={data.date}
+                    value={data.entries}
                     onChange={handleChange}
                 />
+                
                 <input
                     type="text"
-                    id="location"
+                    id="location" 
                     placeholder="Location"
                     required
                     value={data.location}
                     onChange={handleChange}
                 />
+                
                 <button type="submit">Submit</button>
             </form>
+            {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>} 
+            {error && <p style={{ color: 'red' }}>{error}</p>} 
         </div>
     );
 }
