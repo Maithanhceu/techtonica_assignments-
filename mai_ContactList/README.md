@@ -6,7 +6,7 @@
 - Frontend: React JavaScript 
 
 # Libraries/Technologies: 
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,react,postgres,nodejs,jest,vite)](https://skillicons.dev)
+[![My Skills icon for the different technologies that I am using including: HTML, CSS, REACT, POSTGRES, NODEJS, JEST, and VITE ](https://skillicons.dev/icons?i=js,html,css,react,postgres,nodejs,jest,vite)](https://skillicons.dev)
 
 # Installation: 
 To install and run this locally, follow these steps:
@@ -24,7 +24,7 @@ Navigate to the project directory and install the required dependencies, then st
 # Open the  in the browser and you should see the following EventForm: 
 
 
-# You can add and delete events:
+# You can add and delete an event:
 
 
 
