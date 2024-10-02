@@ -1,6 +1,8 @@
 # Mai Contact 
 - An event form to manage your contacts.
 
+# Planning for the Contact Form:
+- ![An image of how I planned to build the form](./image.png)
 # Frameworks: 
 - Backend: ExpressJS, Node.js, SQL Postgres
 - Frontend: React JavaScript 
