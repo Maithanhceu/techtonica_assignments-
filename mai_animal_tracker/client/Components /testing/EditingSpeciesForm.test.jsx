@@ -24,10 +24,8 @@ describe('EditSpeciesForm', () => {
         target: { value: '5' },
       });
   
-      // Click the update button
       fireEvent.click(screen.getByText(/Update Species/i));
   
-      // Verify the onUpdate function is called with the updated data
       expect(mockOnUpdate).toHaveBeenCalledWith({
         ...mockItem,
         estimated_number: 5,
