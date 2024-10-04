@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import Place from "./Place";
-import EntrieForm from "./EntrieForm";
-import './App.css'
+import Place from "./Components/Place";
+import EntrieForm from "./Components/EntrieForm";
+import './CSS/App.css'
+import AllPostCards from "./Components/AllPostCards";
 
 function App() {
   const [data, setData] = useState([]);
@@ -20,7 +21,7 @@ function App() {
       }
 
       const jsonData = await response.json();
-      setData(jsonData); 
+      setData(jsonData);
     } catch (error) {
       console.error('Fetch error:', error);
     }
@@ -28,26 +29,29 @@ function App() {
 
   useEffect(() => {
     fetchData();
-  }, []); 
+  }, []);
 
-  const smallExpoText = `If you have a hard time pronouncing my name, do not be discouraged! 
-  It's pronounced 'My', like: My Friend, My Favorite Person, or My 
-  Extraordinary, Endearing Confident.`;
-  
+const smallExpoText = `If you have a hard time pronouncing my name, please don't be discouraged! 
+  It's pronounced "My," just like in "My Friend," "My Favorite Person," or "My Extraordinary, Endearing Confident."`;
+  ;
+
   return (
-    <div>
-      <h1>
-        Mai Travel Blog! 
-        <div className="smallExpoText"> 
-          {smallExpoText}
-        </div>
+    <div className="blogContainer">
+      <h1 className="blogTitle">
+        Mai Travel Blog!
+        <div className="smallExpoText">{smallExpoText}</div>
       </h1>
-    <Place data = {data}/> 
-    <EntrieForm/>
-
+      <div className="container">
+        <div className="individualPost">
+          <Place data={data} />
+          <EntrieForm />
+        </div>
+        <div className="postcards">
+          <AllPostCards data={data} />
+        </div>
+      </div>
     </div>
   );
 }
-
 export default App;
 
