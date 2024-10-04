@@ -1,5 +1,3 @@
-# React + Vite
-
 # Mai weather App
 - A weather app that allows users to search weather location.
 
@@ -22,17 +20,17 @@ First, clone the repository to your local machine using the following command: h
 
 Open VSCode and open the  in the browser.
 
-# Gameplay:
+# Location App rendering:
 The weather app presents an app a component that will users to find a the weather in any location. 
 
-# Click Play on the App:
+# Input a location:
 Once you open the link - the following should be shown on the screen.
 
 ![Game Beginning](https://media.giphy.com/media/yiLIvLOHdXgk1mWWug/giphy.gif)
 
 
-# How the end of the App should appear after a user finishes answering all questions:
-This is the visual at the end of the game once all the questions are done :) 
+# How the end of the App should appear after you put in a search:
+This is the visual when you search for a location:) 
 
 ![Game End](https://media.giphy.com/media/eQmu9tcV2negAFgC8v/giphy.gif)
 

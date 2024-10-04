@@ -106,8 +106,9 @@ function EditSpeciesForm({ item, onUpdate, onDelete }) {
           />
         </div>
         <div className='label'>
-          <label>Estimated Number:</label>
+          <label  htmlFor="Estimated Number">Estimated Number:</label>
           <input
+            id="Estimated Number"
             className='input'
             type="number"
             name="estimated_number"

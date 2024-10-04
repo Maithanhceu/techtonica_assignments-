@@ -20,7 +20,7 @@ function MyMap({ setSearch }) {
   const handleOnPlacesChanged = () => {
     const places = inputRef.current.getPlaces();
     if (places.length > 0) {
-      setSearch(places[0].formatted_address);
+      setSearch(places[0].formatted_address); 
     }
   };
 
@@ -31,10 +31,6 @@ function MyMap({ setSearch }) {
         <StandaloneSearchBox
           onLoad={(ref) => (inputRef.current = ref)}
           onPlacesChanged={handleOnPlacesChanged}
-          options={{
-            componentRestrictions: { country: 'us' },
-            types: ['(cities)'],
-          }}
         >
           <input
             type="text"

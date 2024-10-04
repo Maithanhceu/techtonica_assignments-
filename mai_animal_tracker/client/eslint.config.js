@@ -35,4 +35,19 @@ export default [
       ],
     },
   },
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}'], // Adjust based on your test file naming convention
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        jest: true, // Add jest globals
+        describe: true,
+        it: true,
+        expect: true,
+        
+      },
+    },
+    rules: {
+    },
+  },
 ]
