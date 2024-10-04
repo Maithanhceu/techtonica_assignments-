@@ -55,7 +55,7 @@ app.post('/translate', async (req, res) => {
           params: {
             q: text,
             target: targetLanguage,
-            key: 'AIzaSyBZBLbYenOvTgUATmIZDhiVsKy0XQE25qM',
+            key: '',
           },
         }
       );
