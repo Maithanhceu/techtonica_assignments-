@@ -1,6 +1,7 @@
 import express from 'express';
 import pkg from 'pg';
 import cors from 'cors';
+import axios from 'axios';
 const { Pool } = pkg;
 const PORT = 1113;
 const app = express(); 
@@ -18,7 +19,7 @@ const pool = new Pool({
 app.get('/api', async (req, res) => {
     try {
         const result = await pool.query('SELECT * FROM blogEntries');
-        res.json(result.rows); // Send the rows from the query result as JSON
+        res.json(result.rows); 
     } catch (error) {
         console.error("Error fetching data:", error);
         res.status(500).send("Internal Server Error");
@@ -40,6 +41,33 @@ app.post('/add', async (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 });
+
+//request to get the translation 
+
+app.post('/translate', async (req, res) => {
+    const { text, targetLanguage } = req.body;
+  
+    try {
+      const response = await axios.post(
+        `https://translation.googleapis.com/language/translate/v2`,
+        {},
+        {
+          params: {
+            q: text,
+            target: targetLanguage,
+            key: 'AIzaSyBZBLbYenOvTgUATmIZDhiVsKy0XQE25qM',
+          },
+        }
+      );
+  
+      const translatedText = response.data.data.translations[0].translatedText;
+      res.json({ translatedText });
+    } catch (error) {
+      console.error('Error translating text:', error);
+      res.status(500).send('Error translating text');
+    }
+  });
+  
 
 app.listen(PORT, () => {
     console.log(`Hello, Mai server is running on port ${PORT}`);
