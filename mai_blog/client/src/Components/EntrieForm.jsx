@@ -65,6 +65,7 @@ function EntrieForm() {
                 <input
                     type="date"
                     id="entries" 
+                    placeholder="entries"
                     required
                     value={data.entries}
                     onChange={handleChange}
@@ -74,7 +75,8 @@ function EntrieForm() {
                     type="text"
                     id="location" 
                     placeholder="Location"
-                    required
+
+
                     value={data.location}
                     onChange={handleChange}
                 />
