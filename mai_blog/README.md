@@ -18,7 +18,8 @@ To install and run this locally, follow these steps:
 
 # Clone the Repository: 
 First, clone the repository to your local machine using the following command: 
- ![Link to my repository, the link is:(https://github.com/Maithanhceu/techtonica_assignments-/tree/795edb210b8481d42ca8ea2476525854662ee47b/mai_blog/client/src)]`git clone(https://github.com/Maithanhceu/techtonica_assignments-/tree/795edb210b8481d42ca8ea2476525854662ee47b/mai_blog/client/src)`
+`git clone https://github.com/Maithanhceu/techtonica_assignments-/tree/795edb210b8481d42ca8ea2476525854662ee47b/mai_blog/client/src`
+
 
 # Install Dependencies and Run the Server:
 Navigate to the project directory and install the required dependencies, then start the development server using the following commands:
