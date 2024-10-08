@@ -75,6 +75,8 @@ function EntrieForm() {
                     type="text"
                     id="location" 
                     placeholder="Location"
+
+
                     value={data.location}
                     onChange={handleChange}
                 />

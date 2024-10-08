@@ -1,3 +1,4 @@
+
 # Planning stage for Mai Blog App
 ![Image of my planning stage](Planning_Stage.png)
 
@@ -9,15 +10,16 @@
 - Frontend: React JavaScript 
 
 # Libraries/Technologies: 
+
 [![My Skills icons of html, css, react, postgres, nodejs, jest, vite, Google Translate API](https://skillicons.dev/icons?i=js,html,css,react,postgres,nodejs,jest,vite)](https://skillicons.dev)
 
 - **Google Translate API:** Used for translating blog content into different languages, enhancing accessibility for users around the world.
-
 # Installation: 
 To install and run this locally, follow these steps:
 
 # Clone the Repository: 
 First, clone the repository to your local machine using the following command: 
+
 `git clone https://github.com/Maithanhceu/techtonica_assignments-/tree/795edb210b8481d42ca8ea2476525854662ee47b/mai_blog/client/src`
 
 
@@ -28,6 +30,7 @@ Navigate to the project directory and install the required dependencies, then st
 `npm run dev`
 
 # Open the  in the browser and you should see the following blog page: 
+
 ![A Presentation of the interface of my homescreen will appear](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDVwc3FrOW1hd3hhODV2cWNxdDBjY3h4cWhhYTJ1aHM2eWd3dXFwMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/spnLzo8zT0pPt4okzC/giphy.gif)
 
 # You can get translated text: 
