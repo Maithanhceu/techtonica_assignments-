@@ -1,4 +1,4 @@
-# Planning stage for Mai BLog App
+# Planning stage for Mai Blog App
 ![Image of my planning stage](Planning_Stage.png)
 
 # Mai Blog 
