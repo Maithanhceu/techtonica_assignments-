@@ -1,0 +1,37 @@
+.blogContainer {
+    padding: 20px;
+    background-color: #7e9ff2;
+  }
+  
+  .blogTitle {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .smallExpoText {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .individualPost {
+    flex: 1;
+    margin-right: 10px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .postcards {
+    flex: 1; 
+    margin-left: 10px;
+    padding: 15px;
+    border-radius: 8px;
+  }

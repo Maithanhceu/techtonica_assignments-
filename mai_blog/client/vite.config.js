@@ -13,6 +13,10 @@ export default defineConfig({
         target: 'http://localhost:1113',
         changeOrigin: true,
       },
+      '/translate': {
+        target: 'http://localhost:1113',
+        changeOrigin: true,
+      }
     },
   },
 });

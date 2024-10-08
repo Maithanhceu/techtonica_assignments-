@@ -6,7 +6,7 @@ function MyMap({ setSearch }) {
   const [mapError, setMapError] = useState('');
   const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: '',
+    googleMapsApiKey: '',  // Add your API key here
     libraries: ["places"],
   });
 
@@ -28,12 +28,12 @@ function MyMap({ setSearch }) {
     <div>
       {mapError && <p style={{ color: 'red' }}>{mapError}</p>}
       {isLoaded && (
-        <StandaloneSearchBox 
-          onLoad={(ref) => (inputRef.current = ref)} 
+        <StandaloneSearchBox
+          onLoad={(ref) => (inputRef.current = ref)}
           onPlacesChanged={handleOnPlacesChanged}
         >
           <input
-            type='text'
+            type="text"
             placeholder="Example: Paris, Berlin, Chicago, etc."
           />
         </StandaloneSearchBox>
@@ -43,3 +43,4 @@ function MyMap({ setSearch }) {
 }
 
 export default MyMap;
+
