@@ -73,11 +73,13 @@ function EFW() {
       Hi, welcome to Mai's take on <strong>'Rock, Paper, Scissors'</strong>. 
       <br /><br />
       <span style={{ color: '#a03028', fontSize: '20px' }}> Here are the <strong>RULES</strong>:  </span>
-      <br /><br />
-      <strong>Earth</strong> takes out <strong>Fire</strong>. <br />
-      <strong>Wind</strong> blows away <strong>Earth</strong>. <br />
-      <strong>Fire</strong> consumes <strong>Wind</strong>. 
-      <br /><br />
+      <br />
+      <ul style={{ listStyleType: 'disc', paddingLeft: '20px',  fontSize: '18px'  }}>
+      <li><strong>Earth</strong> takes out <strong>Fire</strong>.</li>
+      <li><strong>Wind</strong> blows away <strong>Earth</strong>.</li>
+      <li><strong>Fire</strong> consumes <strong>Wind</strong>.</li>
+    </ul>
+      <br />
       Have fun!
     </span>
   );
