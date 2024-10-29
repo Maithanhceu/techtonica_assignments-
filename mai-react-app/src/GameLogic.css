@@ -1,6 +1,7 @@
 .game-logic-container {
     display: flex;
     justify-content: space-evenly;
+    font-size: medium;
     flex-direction: column;
     border: 2px solid #a03028;
     padding: 15px;

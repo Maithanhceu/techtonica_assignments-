@@ -79,6 +79,8 @@ function EFW() {
       Have fun!
     </span>
   );
+
+  const title = "Earth, Wind & Fire: Mai's Take on the 'Rock, Paper, Scissors' Game";
   
 
   return (
@@ -95,7 +97,7 @@ function EFW() {
         </div>
       </div>
       <GameLogic
-        title={"Earth, Wind & Fire: Mai's Take on the 'Rock, Paper, Scissors' Game"}
+        title={title}
         description={description}
       />
 
