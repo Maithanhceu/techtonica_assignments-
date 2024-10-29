@@ -23,4 +23,7 @@ Navigate to the project directory and install the required dependencies, then st
 `npm run dev`
 
 # Open the  in the browser and you should see the following game page: 
+![My web application](https://media.giphy.com/media/4lmwrNSsV5bxbgcbeI/giphy.gif)
+
+
 
