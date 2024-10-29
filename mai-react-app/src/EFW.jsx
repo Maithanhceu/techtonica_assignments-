@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import GameLogic from './GameLogic';
 
 //Step 1: I define a function with a functional react *component*
-function EFW() {
+function EFW({handleReset}) {
   //create an array of elements that is use in the computerChoice 
   const optionsDropBox = ["Earth", "Wind", "Fire"];
 
@@ -75,18 +75,6 @@ function EFW() {
     //updates the score state
     setScore(scoreKeeper);
   };
-  // Create a reset function 
-
-  const handleReset = () => {
-    setResult("");
-    setScore({
-      wins: 0,
-      losses: 0,
-      ties: 0
-    });
-  };
-
-  
 
   return (
     <div className="efw-container">
