@@ -6,7 +6,7 @@
 
 # Libraries/Technologies: 
 
-[![My Skills icons of html, css, react, postgres, nodejs, jest, vite, Google Translate API](https://skillicons.dev/icons?i=js,html,css,react)](https://skillicons.dev)
+[![My Skills icons of html, css, react](https://skillicons.dev/icons?i=js,html,css,react)](https://skillicons.dev)
 
 To install and run this locally, follow these steps:
 
