@@ -70,7 +70,9 @@ function EFW() {
 
   const description = (
     <span className="efw-description">
-      Hi, welcome to Mai's take on <strong>'Rock, Paper, Scissors'</strong>. Here are the <strong>RULES</strong>: 
+      Hi, welcome to Mai's take on <strong>'Rock, Paper, Scissors'</strong>. 
+      <br /><br />
+      <span style={{ color: '#a03028', fontSize: '20px' }}> Here are the <strong>RULES</strong>:  </span>
       <br /><br />
       <strong>Earth</strong> takes out <strong>Fire</strong>. <br />
       <strong>Wind</strong> blows away <strong>Earth</strong>. <br />
