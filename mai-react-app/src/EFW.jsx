@@ -2,9 +2,27 @@ import React, { useState } from 'react';
 import GameLogic from './GameLogic';
 
 //Step 1: I define a function with a functional react *component*
-function EFW() {
+function EFW({handleReset}) {
   //create an array of elements that is use in the computerChoice 
   const optionsDropBox = ["Earth", "Wind", "Fire"];
+
+  const description = (
+    <span className="efw-description">
+      Hi, welcome to Mai's take on <strong>'Rock, Paper, Scissors'</strong>. 
+      <br /><br />
+      <span style={{ color: '#a03028', fontSize: '20px' }}> Here are the <strong>RULES</strong>:  </span>
+      <br />
+      <ul style={{ listStyleType: 'disc', paddingLeft: '20px',  fontSize: '18px'  }}>
+      <li><strong>Earth</strong> takes out <strong>Fire</strong>.</li>
+      <li><strong>Wind</strong> blows away <strong>Earth</strong>.</li>
+      <li><strong>Fire</strong> consumes <strong>Wind</strong>.</li>
+    </ul>
+      <br />
+      Have fun!
+    </span>
+  );
+
+  const title = "Earth, Wind & Fire: Mai's Take on the 'Rock, Paper, Scissors' Game";
 
   // create a helper function to create a randomize computer output
   function computerChoice() {
@@ -57,16 +75,6 @@ function EFW() {
     //updates the score state
     setScore(scoreKeeper);
   };
-  // Create a reset function 
-
-  const handleReset = () => {
-    setResult("");
-    setScore({
-      wins: 0,
-      losses: 0,
-      ties: 0
-    });
-  };
 
   return (
     <div className="efw-container">
@@ -82,23 +90,18 @@ function EFW() {
         </div>
       </div>
       <GameLogic
-        title={"Earth, Wind & Fire: Mai's Take on the 'Rock, Paper, Scissors' Game"}
-        description={
-          <span className="efw-description">
-            Hi, welcome to Mai's take on <strong>'Rock, Paper, Scissors'</strong>. Here are the <strong>*RULES*</strong>: <br /><br />
-            <strong>Earth</strong> takes out <strong>Fire</strong> <br />
-            <strong>Wind</strong> blows away <strong>Earth</strong> <br />
-            <strong>Fire</strong> consumes <strong>Wind</strong> <br /><br />
-            Have fun!
-          </span>
-        }
+        title={title}
+        description={description}
       />
 
       <form className="efw-form" onSubmit={eWFGame}>
         <label htmlFor="gameElements">Earth, Wind, or Fire</label>
         <select name="gameElements" id="gameElements">
           {optionsDropBox.map(option => (
-            <option key={option} value={option}>{option}</option>
+            <option 
+            key={option} 
+            value={option}>
+            {option}</option>
           ))}
         </select>
         <button type="submit">Submit</button>

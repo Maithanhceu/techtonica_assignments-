@@ -1,4 +1,8 @@
 .game-logic-container {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: medium;
+    flex-direction: column;
     border: 2px solid #a03028;
     padding: 15px;
     border-radius: 10px;
@@ -10,9 +14,11 @@
   }
   
   .game-logic-title {
+
     color: #a03028;
     font-size: 20px;
     margin-bottom: 15px;
+    display: block; 
   }
   
   .game-logic-description {
