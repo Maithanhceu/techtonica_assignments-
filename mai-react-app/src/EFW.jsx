@@ -68,6 +68,19 @@ function EFW() {
     });
   };
 
+  const description = (
+    <span className="efw-description">
+      Hi, welcome to Mai's take on <strong>'Rock, Paper, Scissors'</strong>. Here are the <strong>RULES</strong>: 
+      <br /><br />
+      <strong>Earth</strong> takes out <strong>Fire</strong>. <br />
+      <strong>Wind</strong> blows away <strong>Earth</strong>. <br />
+      <strong>Fire</strong> consumes <strong>Wind</strong>. 
+      <br /><br />
+      Have fun!
+    </span>
+  );
+  
+
   return (
     <div className="efw-container">
 
@@ -83,15 +96,7 @@ function EFW() {
       </div>
       <GameLogic
         title={"Earth, Wind & Fire: Mai's Take on the 'Rock, Paper, Scissors' Game"}
-        description={
-          <span className="efw-description">
-            Hi, welcome to Mai's take on <strong>'Rock, Paper, Scissors'</strong>. Here are the <strong>*RULES*</strong>: <br /><br />
-            <strong>Earth</strong> takes out <strong>Fire</strong> <br />
-            <strong>Wind</strong> blows away <strong>Earth</strong> <br />
-            <strong>Fire</strong> consumes <strong>Wind</strong> <br /><br />
-            Have fun!
-          </span>
-        }
+        description={description}
       />
 
       <form className="efw-form" onSubmit={eWFGame}>
