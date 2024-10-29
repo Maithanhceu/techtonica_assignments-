@@ -6,6 +6,24 @@ function EFW() {
   //create an array of elements that is use in the computerChoice 
   const optionsDropBox = ["Earth", "Wind", "Fire"];
 
+  const description = (
+    <span className="efw-description">
+      Hi, welcome to Mai's take on <strong>'Rock, Paper, Scissors'</strong>. 
+      <br /><br />
+      <span style={{ color: '#a03028', fontSize: '20px' }}> Here are the <strong>RULES</strong>:  </span>
+      <br />
+      <ul style={{ listStyleType: 'disc', paddingLeft: '20px',  fontSize: '18px'  }}>
+      <li><strong>Earth</strong> takes out <strong>Fire</strong>.</li>
+      <li><strong>Wind</strong> blows away <strong>Earth</strong>.</li>
+      <li><strong>Fire</strong> consumes <strong>Wind</strong>.</li>
+    </ul>
+      <br />
+      Have fun!
+    </span>
+  );
+
+  const title = "Earth, Wind & Fire: Mai's Take on the 'Rock, Paper, Scissors' Game";
+
   // create a helper function to create a randomize computer output
   function computerChoice() {
     const randomChoice = Math.floor(Math.random() * 3);
@@ -68,23 +86,6 @@ function EFW() {
     });
   };
 
-  const description = (
-    <span className="efw-description">
-      Hi, welcome to Mai's take on <strong>'Rock, Paper, Scissors'</strong>. 
-      <br /><br />
-      <span style={{ color: '#a03028', fontSize: '20px' }}> Here are the <strong>RULES</strong>:  </span>
-      <br />
-      <ul style={{ listStyleType: 'disc', paddingLeft: '20px',  fontSize: '18px'  }}>
-      <li><strong>Earth</strong> takes out <strong>Fire</strong>.</li>
-      <li><strong>Wind</strong> blows away <strong>Earth</strong>.</li>
-      <li><strong>Fire</strong> consumes <strong>Wind</strong>.</li>
-    </ul>
-      <br />
-      Have fun!
-    </span>
-  );
-
-  const title = "Earth, Wind & Fire: Mai's Take on the 'Rock, Paper, Scissors' Game";
   
 
   return (
