@@ -98,7 +98,10 @@ function EFW() {
         <label htmlFor="gameElements">Earth, Wind, or Fire</label>
         <select name="gameElements" id="gameElements">
           {optionsDropBox.map(option => (
-            <option key={option} value={option}>{option}</option>
+            <option 
+            key={option} 
+            value={option}>
+            {option}</option>
           ))}
         </select>
         <button type="submit">Submit</button>
