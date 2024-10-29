@@ -25,5 +25,9 @@ Navigate to the project directory and install the required dependencies, then st
 # Open the  in the browser and you should see the following game page: 
 ![My web application](https://media.giphy.com/media/4lmwrNSsV5bxbgcbeI/giphy.gif)
 
+# Now play the game: 
+![My web application](https://media.giphy.com/media/NBWO6WHTmdMgpIaL6t/giphy.gif)
+
+
 
 
