@@ -18,7 +18,7 @@ function WeatherAPI() {
         }
     
         try {
-          const response = await fetch(`http://localhost:1113/weather/${search}`);
+          const response = await fetch(`/weather/${search}`);
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
@@ -38,7 +38,7 @@ function WeatherAPI() {
           }
   
           try {
-              const response = await fetch(`http://localhost:1113/users/${userId}`, {
+              const response = await fetch(`/users/${userId}`, {
                   method: 'PUT',
                   headers: {
                       'Content-Type': 'application/json',
