@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useUser} from './UserContext';
+import UpdateFavorite from "./UpdateFavorite";
 
 function User() {
     const [username, setUsername] = useState('');
@@ -37,7 +38,6 @@ function User() {
 
     return (
         <div>
-            <h1>User Authentication</h1>
             <input
                 type="text"
                 placeholder="Enter your name"
@@ -53,6 +53,8 @@ function User() {
                 <div>
                     <h2>Welcome, {userData.username}!</h2>
                     <p>Your favorite city: {userData.favorite_city}</p>
+                    <UpdateFavorite/>
+
                 </div>
             ) : (
                 <p>Please sign in to view your profile.</p>

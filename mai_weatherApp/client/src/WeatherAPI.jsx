@@ -60,7 +60,7 @@ function WeatherAPI() {
       return (
         <div className='App'>
           <header className='App-header'>
-            <h1>Weather App</h1>
+            <h1> Mai Weather App</h1>
     
             {/* Icon is rendered only if weather data is available */}
             {weatherData?.weather[0]?.icon && (
@@ -81,10 +81,10 @@ function WeatherAPI() {
     
             {weatherData && (
               <div className="weather-info">
-                <p>Location: {weatherData.name}</p>
-                <p>Temperature: {weatherData.main.temp} °F</p>
-                <p>Condition: {weatherData.weather[0].description}</p>
-                <p>Wind Speed: {weatherData.wind.speed} mph</p>
+                <p><strong>Location: </strong>{weatherData.name}</p>
+                <p><strong>Temperature:</strong> {weatherData.main.temp} °F</p>
+                <p><strong>Condition:</strong> {weatherData.weather[0].description}</p>
+                <p><strong>Wind Speed:</strong> {weatherData.wind.speed} mph</p>
                 <button onClick={handleAddFavorite}>❤️ Add to Favorites</button>
               </div>
             )}

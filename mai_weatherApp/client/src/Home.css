@@ -1,0 +1,30 @@
+.rowOne {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.rowOne button, input {
+    margin-top: 4rem;
+    padding: 0.7rem;
+    width: auto;
+    margin-left: 1rem;
+}
+
+.rowTwo {
+    display: flex 1;
+}
+
+.WeatherAPI {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.WeatherAPI button {
+    margin-left: 1rem;
+    width: auto;
+    padding: 0.7rem;
+
+}

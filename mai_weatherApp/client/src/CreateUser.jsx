@@ -36,7 +36,8 @@ function CreateUser() {
 
   return (
     <>
-      <input
+    <div> 
+    <input
         type="text"
         placeholder="User Name"
         value={userName}
@@ -49,6 +50,9 @@ function CreateUser() {
         onChange={(e) => setFavoriteCity(e.target.value)}
       />
       <button onClick={createUser}>Add User</button>
+
+    </div>
+     
 
       {error && <div style={{ color: 'red' }}>{error}</div>}
       {success && <div style={{ color: 'green' }}>{success}</div>}
