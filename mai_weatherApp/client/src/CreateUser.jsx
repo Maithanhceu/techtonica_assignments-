@@ -50,12 +50,10 @@ function CreateUser() {
         onChange={(e) => setFavoriteCity(e.target.value)}
       />
       <button onClick={createUser}>Add User</button>
+      {error && <div style={{ color: 'white' }}>{error}</div>}
+      {success && <div style={{ color: 'green' }}>{success}</div>}
 
     </div>
-     
-
-      {error && <div style={{ color: 'red' }}>{error}</div>}
-      {success && <div style={{ color: 'green' }}>{success}</div>}
     </>
   );
 }

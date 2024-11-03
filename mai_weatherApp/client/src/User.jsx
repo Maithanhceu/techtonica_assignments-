@@ -47,7 +47,7 @@ function User() {
             <button onClick={handleSignIn}>Sign In</button>
             <button onClick={handleSignOut}>Sign Out</button>
 
-            {error && <p style={{ color: 'red' }}>{error}</p>}
+            {error && <p style={{ color: 'white' }}>{error}</p>}
 
             {userData ? (
                 <div>

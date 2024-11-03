@@ -77,7 +77,7 @@ function WeatherAPI() {
               <button type="submit">Search</button> {/* Use button type submit */}
             </form>
             
-            {error && <p style={{ color: 'red' }}>{error}</p>}
+            {error && <p style={{ color: 'white' }}>{error}</p>}
     
             {weatherData && (
               <div className="weather-info">
