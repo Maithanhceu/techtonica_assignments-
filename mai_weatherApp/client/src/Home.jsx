@@ -1,13 +1,18 @@
-
 import './App.css'
 import CreateUser from './CreateUser'
+import WeatherAPI from './WeatherAPI'
+import { UserProvider } from './UserContext';
+import User from './User'
 
 function Home() {
-
-
   return (
     <>
-     <CreateUser/>
+      <UserProvider>
+        <User />
+        <CreateUser />
+        <WeatherAPI />
+      </UserProvider>
+
     </>
   )
 }
