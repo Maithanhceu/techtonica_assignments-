@@ -2,6 +2,13 @@
 
 - A Portfolio Featuring My Contacts, About Me Section, and Additional Information
 
+# Primary Goals
+- To demonstrate understanding of the foundational topics covered in the first two weeks of Techtonica before diving further into the PERN stack.
+- Create a new HTML/CSS webpage
+- Modify the contents of your page using DOM methods
+- Use common CSS rules to align content (left, right, center), modify colors, sizes of containers and text, etc.
+Get comfortable using CSS media queries
+
 # Frameworks: 
 - HTML, JavaScript, CSS
 
