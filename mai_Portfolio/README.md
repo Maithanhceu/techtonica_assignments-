@@ -27,4 +27,4 @@ First, clone the repository to your local machine using the following command:
 # Stretch Goals: 
 Refactor my CSS using Flexbox! A lot of this code is already refactor from the original which had less JavaScript. 
 
-**Feel free to explore my projects and contact me!**
+**Feel free to explore my projects and contact me! You can contact me at [Mai's LinkedIn Profile](https://www.linkedin.com/in/mai-th2024/)**
