@@ -22,7 +22,6 @@ const pool = new Pool({
 app.post('/newUser', async (req, res) => {
     const { username, favorite_city } = req.body;
 
-    // Log the incoming request body for debugging
     console.log('Received request:', req.body);
 
     try {

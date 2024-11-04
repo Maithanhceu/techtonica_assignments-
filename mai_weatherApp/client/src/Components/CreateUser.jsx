@@ -7,7 +7,15 @@ function CreateUser() {
   const [success, setSuccess] = useState('');
 
   // Function to handle user creation
-  const createUser = async () => {
+  const createUser = async (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    // Ensure that input fields are not empty
+    if (!userName || !favoriteCity) {
+      setError('Please fill in all fields.');
+      return;
+    }
+
     try {
       const response = await fetch('/newUser', {
         method: 'POST',
@@ -32,29 +40,28 @@ function CreateUser() {
     }
   };
 
-  
-
   return (
-    <>
-    <div> 
-    <input
-        type="text"
-        placeholder="User Name"
-        value={userName}
-        onChange={(e) => setUserName(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Favorite City"
-        value={favoriteCity}
-        onChange={(e) => setFavoriteCity(e.target.value)}
-      />
-      <button onClick={createUser}>Add User</button>
-      {error && <div style={{ color: 'white' }}>{error}</div>}
-      {success && <div style={{ color: 'white' }}>{success}</div>}
-
+    <div>
+      <form onSubmit={createUser}>
+        <input
+          type="text"
+          required
+          placeholder="Enter your name"
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
+        />
+        <input
+          type="text"
+          required
+          placeholder="Favorite City"
+          value={favoriteCity}
+          onChange={(e) => setFavoriteCity(e.target.value)}
+        />
+        <button type="submit">Add User</button>
+        {error && <div style={{ color: 'white' }}>{error}</div>}
+        {success && <div style={{ color: 'white' }}>{success}</div>}
+      </form>
     </div>
-    </>
   );
 }
 
