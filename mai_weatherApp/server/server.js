@@ -1,12 +1,16 @@
 import express from 'express';
+import fetch from 'node-fetch';
 import cors from 'cors'
 import pkg from 'pg';
+import { config } from 'dotenv';
+config();
 const { Pool } = pkg;
 const app = express();
 const PORT = 1113;
 
 app.use(cors());
 app.use(express.json());
+
 
 const pool = new Pool({
     host: 'localhost',
@@ -61,7 +65,7 @@ app.get('/user', async (req, res) => {
 
 app.get('/weather/:city', async (req, res) => {
     const city = req.params.city; 
-    const apiKey = '6f2cebdf6e4f982f409227ba7f2a5de5';
+    const apiKey = process.env.API_KEY;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
  
     try {
