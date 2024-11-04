@@ -19,7 +19,7 @@ const pool = new Pool({
     database: 'weatherapp'
 });
 
-app.post('/users', async (req, res) => {
+app.post('/newUser', async (req, res) => {
     const { username, favorite_city } = req.body;
 
     // Log the incoming request body for debugging

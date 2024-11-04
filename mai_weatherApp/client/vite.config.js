@@ -14,6 +14,18 @@ export default defineConfig({
         target: 'http://localhost:1113',
         changeOrigin: true,
       },
+      '/user': {
+        target: 'http://localhost:1113',
+        changeOrigin: true,
+      },
+      '/api/users/': {
+        target: 'http://localhost:1113',
+        changeOrigin: true,
+      },
+      '/newUser': {
+        target: 'http://localhost:1113',
+        changeOrigin: true,
+      },
     },
   },
 });

@@ -15,7 +15,7 @@ function User() {
         }
 
         try {
-            const response = await fetch(`http://localhost:1113/user?username=${username}`);
+            const response = await fetch(`/user?username=${username}`);
             if (!response.ok) {
                 throw new Error('User not found or server error');
             }

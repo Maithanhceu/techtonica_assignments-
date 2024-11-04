@@ -9,7 +9,7 @@ function CreateUser() {
   // Function to handle user creation
   const createUser = async () => {
     try {
-      const response = await fetch('http://localhost:1113/newUser', {
+      const response = await fetch('/newUser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ function CreateUser() {
       />
       <button onClick={createUser}>Add User</button>
       {error && <div style={{ color: 'white' }}>{error}</div>}
-      {success && <div style={{ color: 'green' }}>{success}</div>}
+      {success && <div style={{ color: 'white' }}>{success}</div>}
 
     </div>
     </>

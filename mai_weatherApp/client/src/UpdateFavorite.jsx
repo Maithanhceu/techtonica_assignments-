@@ -8,7 +8,7 @@ function UpdateFavorite() {
 
     async function updateFavoriteCity() {
         try {
-            const response = await fetch(`http://localhost:1113/api/users/${userId}/favoritecity`, {
+            const response = await fetch(`/api/users/${userId}/favoritecity`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
