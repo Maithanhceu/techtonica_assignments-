@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Contacts from '../src/components/Contacts';
-import CreateContact from "../src/components/CreateContact";
-import ViewContact from "../src/components/ViewContact";
+import Contacts from "../components/Contacts";
+import CreateContact from "../components/CreateContact";
+import ViewContact from "../components/ViewContact";
 import '../src/components/CSS/Home.css';
 
 function Home() { 
