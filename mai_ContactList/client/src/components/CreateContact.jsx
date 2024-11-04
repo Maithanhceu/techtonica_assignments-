@@ -1,5 +1,5 @@
 import { useReducer } from 'react';
-import './CreateContact.css'
+import '../components/CSS/CreateContact.css'
 
 const initialState = {
     contactid: '',

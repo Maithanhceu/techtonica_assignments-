@@ -1,5 +1,5 @@
 import { useReducer, useEffect } from 'react';
-import React from 'react';
+import '../components/CSS/EditContactForm.css';
 
 // Define the initial state
 const initialState = {

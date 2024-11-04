@@ -1,5 +1,4 @@
-
-  .input {
+.input {
     display: flex; 
     flex-direction: row;
     justify-content: space-evenly;
@@ -9,15 +8,15 @@
     width: 50%;
   }
   
-  button {
+.button {
     padding: 10px 15px;
-    background-color: blue; /* Change button color to blue */
+    background-color: blue; 
     color: white; 
     border: none;
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3; 
 }
   

@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import Contacts from "../components/Contacts";
 import CreateContact from "../components/CreateContact";
 import ViewContact from "../components/ViewContact";
-import './App.css';
+import '../src/components/CSS/Home.css';
 
-function App() { 
+function Home() { 
   const [contacts, setContacts] = useState([]);
  
   const fetchContacts = async () => {
@@ -39,4 +39,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

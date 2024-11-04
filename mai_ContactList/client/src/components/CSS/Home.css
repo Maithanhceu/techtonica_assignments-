@@ -7,7 +7,7 @@
   display: flex; 
   justify-content: space-evenly;
   padding: 20px;
-  box-sizing: border-box; /* Include padding in width calculations */
+  box-sizing: border-box; 
   background-color: rgb(109, 137, 207);
   border-width: 2rem; 
   border-style: solid; 
@@ -19,4 +19,4 @@
   flex: 1; 
   margin: 0 10px; 
 }
-
+}

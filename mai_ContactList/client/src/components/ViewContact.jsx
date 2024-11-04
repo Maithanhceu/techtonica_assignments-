@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './ViewContact.css'; // Ensure you import the CSS file
+import '../components/CSS/ViewContact.css'
 
 function ViewContact({ contacts }) {
     const [showFullList, setShowFullList] = useState(false);

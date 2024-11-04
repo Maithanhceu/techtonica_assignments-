@@ -1,5 +1,3 @@
-/* Contacts.css */
-
 .contacts-container {
     padding: 20px;
     background-color: #f9f9f9;
@@ -9,15 +7,15 @@
 
 .contact-detail {
     margin-bottom: 15px; 
-    color: #333; /* Text color */
+    color: #333; 
 }
 
 .contact-detail strong {
-    color: #007bff; /* Strong text color for emphasis */
+    color: #007bff; 
 }
 
 .select-contact {
-    margin-bottom: 20px; /* Space below the select dropdown */
+    margin-bottom: 20px; 
     padding: 10px;
     font-size: 16px;
 }
