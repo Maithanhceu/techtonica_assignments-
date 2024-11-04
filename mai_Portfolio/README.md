@@ -2,6 +2,15 @@
 
 - A Portfolio Featuring My Contacts, About Me Section, and Additional Information
 
+## Table of Contents
+- [Primary Goals](#primary-goals)
+- [Frameworks](#frameworks)
+- [Libraries/Technologies](#librariestechnologies)
+- [Clone the Repository](#clone-the-repository)
+- [How to Run](#how-to-run)
+- [Open the Application](#open-the-application)
+- [Stretch Goals](#stretch-goals)
+
 # Primary Goals
 - To demonstrate understanding of the foundational topics covered in the first two weeks of Techtonica before diving further into the PERN stack.
 - Create a new HTML/CSS webpage
