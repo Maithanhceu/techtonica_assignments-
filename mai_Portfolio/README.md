@@ -26,3 +26,5 @@ First, clone the repository to your local machine using the following command:
 # Open the application in the browser and you should see the following  page: 
 ![Photo of Mai Portfolio](./Photo/Mai_Portfolio.png)
 
+# Stretch Goals: 
+Refactor my CSS using Flexbox! A lot of this code is already refactor from the original which had less JavaScript. 
