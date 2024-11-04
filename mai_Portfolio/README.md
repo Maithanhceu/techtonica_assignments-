@@ -23,5 +23,6 @@ First, clone the repository to your local machine using the following command:
    - Watch the animated greeting text appear.
    - Use the contact form to send a message (note that the form does not have back-end functionality yet).
 
-# Open the  in the browser and you should see the following  page: 
+# Open the application in the browser and you should see the following  page: 
+![Photo of Mai Portfolio](./Photo/Mai_Portfolio.png)
 
