@@ -1,0 +1,26 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: rgb(107, 144, 229);
+}
+
+button{
+  background-color: aliceblue;
+  border-radius: 10px;
+  border: 1px solid rgb(1, 55, 252);
+}
+
+input{
+  border-radius: 10px;
+  border: 1px solid rgb(1, 55, 252);
+}
+
+.WeatherAPI .App{
+  background-color: rgb(240, 169, 228);
+  justify-content: center;
+  width: auto;
+  padding: 3rem;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+}
