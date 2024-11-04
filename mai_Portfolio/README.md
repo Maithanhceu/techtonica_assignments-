@@ -6,9 +6,7 @@
 - HTML, JavaScript, CSS
 
 # Libraries/Technologies: 
-- ![HTML](https://www.svgrepo.com/svg/194966/html5.svg) HTML
-- ![CSS](https://www.svgrepo.com/svg/194974/css3.svg) CSS
-- ![JavaScript](https://www.svgrepo.com/svg/349381/javascript.svg) JavaScript
+[![My Skills - JavaScript, HTML, and CSS](https://skillicons.dev/icons?i=js,html,css)](https://skillicons.dev)
 
 # Clone the Repository: 
 First, clone the repository to your local machine using the following command: 
