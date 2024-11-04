@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../components/CSS/Contacts'; 
+import '../components/CSS/Contacts.css';
 
 function Contacts({ contacts, setContacts }) {
     const [selectedContact, setSelectedContact] = useState(null);
