@@ -7,7 +7,7 @@ const PORT = 5000;
 // Configure PostgreSQL connection pool
 const pool = new Pool({
   host: 'localhost',
-  database: 'spotifywrappedtable',
+  database: 'spotifyWrappedTable',
   port: 5432,
   max: 20, // Maximum number of connections in the pool
   idleTimeoutMillis: 30000, // How long a client is allowed to remain idle before being closed
