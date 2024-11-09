@@ -30,7 +30,7 @@ Weekly Project for Week 1 of the Techtonica Software Engineer in Training Progra
 # Clone the Repository: 
 First, clone the repository to your local machine using the following command: 
 
-`git clone hhttps://github.com/Maithanhceu/techtonica_assignments-/tree/b0fa8bfb257c1e174c524844b81a6308b8c0a8c2/mai_Portfolio`
+`git clone https://github.com/Maithanhceu/techtonica_assignments-/tree/af9e30802fb174f7b6a67b0f00e760c2f5d4441f/recipe-page`
 
 # How to Run
 1. Open the `index.html` file in your web browser:
