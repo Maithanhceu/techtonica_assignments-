@@ -48,13 +48,9 @@ git clone https://github.com/Maithanhceu/techtonica_assignments-/tree/af9e30802f
 ```
 ### Step 2: Install dependencies
 - Install dependencies using `npm install` in the terminal in the `server` directory (`techtonica-projects/mai-database`).
-
-### Step 3: Run the Server 
-npm start to run Rest API server. Visit http://localhost:5000 for server site (ExpressJS, NodeJS).
-
+  
 # How to Run
-1. Open the `index.html` file in your web browser:
-   - You can do this by double-clicking the file or right-clicking and selecting "Open with" to choose your preferred browser.
+- npm start to run Rest API server. Visit http://localhost:5000 for server site (ExpressJS, NodeJS).
 
 # Open the application in the Post and start testing and you should see the following  page: 
 
