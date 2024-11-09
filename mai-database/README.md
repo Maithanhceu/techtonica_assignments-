@@ -1,6 +1,6 @@
 # Mai Database  
 
-A Recipe Page for How to Make King Cake  
+A Database to hold all my music 
 
 ## Table of Contents
 - [Project Overview](#project-overview)
