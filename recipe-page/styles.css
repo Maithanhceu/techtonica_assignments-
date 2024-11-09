@@ -91,6 +91,14 @@ h2{
   padding: 2.8em;
   margin: 2.8em;
 }
+
+.Recipes{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: aliceblue;
+  padding: 2.8em;
+  margin: 2.8em; 
+}
 /*<!--media queries--> */
 @media (min-width: 1081px) {
   body {
