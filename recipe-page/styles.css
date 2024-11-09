@@ -11,6 +11,10 @@
 .navbar {
   display: flex;
   justify-content: space-evenly;
+  background-color: whitesmoke;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
 }
 
 
