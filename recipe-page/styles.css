@@ -29,8 +29,10 @@ header,
 }
 
 .AboutRecipe {
+  background-color: aliceblue;
   padding: 2.8rem;
   align-items: center;
+  margin: 1.8em;
 
 }
 
@@ -49,9 +51,9 @@ header,
 }
 .Ingredients ul li {
   color: black;
-  padding-left: 25px; /* Add padding for better spacing */
-  position: relative; /* Make space for checkboxes */
-  margin-bottom: 8px; /* Optional: space between list items */
+  padding-left: 25px; 
+  position: relative; 
+  margin-bottom: 8px;
 }
 ul {
   list-style-type: none;
@@ -64,7 +66,11 @@ ul {
 .recipe-divider{
   display: flex;
   justify-content: space-evenly;
-  background-color: #4d84d0;
+  background-color: aliceblue;
+  border-radius: 10px;
+  font-size: 1em;
+  margin: 2.8em;
+  padding: 2em; 
 }
 
 h2{
@@ -75,7 +81,7 @@ h2{
 /*<!--media queries--> */
 @media (min-width: 1081px) {
   body {
-    background-color: #9FCC89;
+    background-color: #5583df;
   }
 }
 
@@ -95,6 +101,6 @@ h2{
 
 @media (min-width: 1200px) {
   body {
-    background-color: #E7E29C;
+    background-color: #7984c1;
   }
 }
