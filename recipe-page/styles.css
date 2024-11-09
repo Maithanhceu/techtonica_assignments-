@@ -93,7 +93,7 @@ h2{
 }
 
 .steps1, .steps2 {
-  background-color: rgb(242, 240, 255);
+  background-color: rgb(231, 223, 246);
   border: 1.5px solid black;
   border-radius: 10px;
   padding: 2.8em;
@@ -113,7 +113,7 @@ h2{
 /*<!--media queries--> */
 @media (min-width: 1081px) {
   body {
-    background-color: #5583df;
+    background-color: #94a8e1;
   }
 }
 
