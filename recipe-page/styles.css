@@ -30,6 +30,7 @@ header,
 
 .AboutRecipe {
   background-color: aliceblue;
+  border-radius: 10px;
   padding: 2.8rem;
   align-items: center;
   margin: 1.8em;
@@ -82,6 +83,13 @@ h2{
 .steps{
   display: flex;
   justify-content: space-evenly;
+}
+
+.steps1, .steps2 {
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 2.8em;
+  margin: 2.8em;
 }
 /*<!--media queries--> */
 @media (min-width: 1081px) {
