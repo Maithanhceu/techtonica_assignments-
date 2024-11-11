@@ -3,9 +3,9 @@
 
 # Frameworks: 
   - **Frontend**: 
-    - [![React](https://skillicons.dev/icons?i=react)](https://reactjs.org/)[![Vite](https://skillicons.dev/icons?i=vite)](https://vitejs.dev/)[![JavaScript](https://skillicons.dev/icons?i=js)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+    - [![React](https://skillicons.dev/icons?i=react)](https://reactjs.org/) [![Vite](https://skillicons.dev/icons?i=vite)](https://vitejs.dev/) [![JavaScript](https://skillicons.dev/icons?i=js)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
   - **Backend**: 
-    - [![ExpressJS](https://skillicons.dev/icons?i=express)](https://expressjs.com/) [![NodeJS](https://skillicons.dev/icons?i=nodejs)](https://nodejs.org/)[![PostgreSQL](https://skillicons.dev/icons?i=postgres)](https://www.postgresql.org/)
+    - [![ExpressJS](https://skillicons.dev/icons?i=express)](https://expressjs.com/) [![NodeJS](https://skillicons.dev/icons?i=nodejs)](https://nodejs.org/) [![PostgreSQL](https://skillicons.dev/icons?i=postgres)](https://www.postgresql.org/)
 
 # Libraries/Technologies: 
 [![My Skills](https://skillicons.dev/icons?i=js,html,css,react,postgres,nodejs,jest,vite)](https://skillicons.dev)
