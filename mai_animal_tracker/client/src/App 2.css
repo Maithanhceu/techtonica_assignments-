@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+ 
+}
+
+.header{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+    margin-bottom: 20px;
+}
+
+.App{
+    background-color: rgb(200, 214, 239);
+}
