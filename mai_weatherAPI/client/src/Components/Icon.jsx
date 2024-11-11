@@ -1,4 +1,3 @@
-import './App.css'; 
 import PropTypes from 'prop-types';
 
 function Icon({ iconCode }) {
