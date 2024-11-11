@@ -35,6 +35,7 @@ function Home() {
         onChange={(e) => setCity(e.target.value)}
         placeholder="Enter city name! For example: Vienna, Budapest, Hasselt"
         required
+        aria-label="City name input field"
       />
       <button onClick={fetchWeatherData}>Search Weather Report</button>
       {weatherData && (
