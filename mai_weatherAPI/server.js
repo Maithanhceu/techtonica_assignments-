@@ -12,7 +12,6 @@ app.use(cors()); // Enable CORS
 // Basic route to fetch weather API 
 app.get('/weather/:city', async (req, res) => {
    const city = req.params.city; 
-   const apiKey = '6f2cebdf6e4f982f409227ba7f2a5de5';
    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
    try {
