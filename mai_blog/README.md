@@ -1,6 +1,6 @@
 
 # Planning stage for Mai Blog App
-![Image of my planning stage](Planning_Stage.png)
+![Image of my planning stage](server/Photo/Planning_Stage.png)
 
 # Mai Blog 
 - A blog that documents all the places I (Mai) have traveled to, allowing users to see and review my experiences. You can also create a blog entry; however, for personal reasons, I have opted not to allow users to delete any entries. These are personal memories, and like all memories, they should not be erased. Instead, they can be added to, similar to adding a new memory. :)
