@@ -29,7 +29,7 @@ function CreateUser() {
         throw new Error('Failed to create user');
       }
 
-      const newUser = await response.json(); // Get the new user response
+      const newUser = await response.json();
       setSuccess('User created successfully!');
       setError('');
       setUserName(''); // Clear the input fields
