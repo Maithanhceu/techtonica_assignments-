@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import he from 'he';  
-import './Count.css';
+import './CSS/Count.css';
 
 //props
 function Count({ questions, onGameEnd }) {

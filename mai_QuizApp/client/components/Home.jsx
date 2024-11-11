@@ -1,4 +1,4 @@
-import './Home.css';
+import '../components/CSS/Home.css';
 import Count from './Count';
 import { useState } from 'react';
 
