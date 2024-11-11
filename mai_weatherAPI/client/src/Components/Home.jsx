@@ -33,7 +33,7 @@ function Home() {
         type="text"
         value={city}
         onChange={(e) => setCity(e.target.value)}
-        placeholder="Enter city name"
+        placeholder="Enter city name! For example: Vienna, Budapest, Hasselt"
         required
       />
       <button onClick={fetchWeatherData}>Search Weather Report</button>
