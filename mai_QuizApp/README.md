@@ -41,10 +41,10 @@ git clone https://github.com/Maithanhceu/techtonica_assignments-/tree/50487cbf42
 Open VSCode and open the  in the browser. You should see the following Game: 
 
 
-# Gameplay:
+## Gameplay:
 The game presents trivia questions about movies/films. Users will answer questions and see their score at the end of the game.
 
-# Click Play on the App: 
+## Game Preview:
 Once you open the link - the following should be shown on the screen. 
 
 ![Game Beginning GIF](https://media.giphy.com/media/FVkD8GfNaVZj62vInf/giphy.gif)
