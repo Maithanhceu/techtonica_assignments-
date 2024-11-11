@@ -1,8 +1,8 @@
-import './App.css';
+import './Home.css';
 import Count from './Count';
 import { useState } from 'react';
 
-function App() {
+function Home() {
   const [questions, setQuestions] = useState([]);
   const [error, setError] = useState('');
   const [finalStatus, setFinalStatus] = useState('');
@@ -53,4 +53,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
