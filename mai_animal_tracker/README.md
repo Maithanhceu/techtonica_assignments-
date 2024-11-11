@@ -2,8 +2,10 @@
 - An animal tracking app to manage animal sightings, add in new sightings, and editing sightings. 
 
 # Frameworks: 
-- Backend: ExpressJS, Node.js, SQL Postgres
-- Frontend: React, Vite, JavaScript 
+  - **Frontend**: 
+    - [![React](https://skillicons.dev/icons?i=react)](https://reactjs.org/) [![Vite](https://skillicons.dev/icons?i=vite)](https://vitejs.dev/) [![JavaScript](https://skillicons.dev/icons?i=js)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  - **Backend**: 
+    - [![ExpressJS](https://skillicons.dev/icons?i=express)](https://expressjs.com/) [![NodeJS](https://skillicons.dev/icons?i=nodejs)](https://nodejs.org/) [![PostgreSQL](https://skillicons.dev/icons?i=postgres)](https://www.postgresql.org/)
 
 # Libraries/Technologies: 
 [![My Skills](https://skillicons.dev/icons?i=js,html,css,react,postgres,nodejs,jest,vite)](https://skillicons.dev)
@@ -21,7 +23,7 @@ Navigate to the project directory and install the required dependencies, then st
 `npm install`
 `npm run dev`
 
-# Open the  in the browser and you should see the following AnimalForm: 
+# Open the  in the browser and you should see the following Animal Form: 
 ![Front of my Form](https://media.giphy.com/media/3tdux2fviGR2X64Ala/giphy.gif)
 
 # You can edit a tracking:
